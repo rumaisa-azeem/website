@@ -1,0 +1,20 @@
+[
+  {
+    "id" : "1",
+    "name" : "Sudoku Solver",
+    "image" : "sudokuSolver.png",
+    "description" : "A Django web app with an algorithm that can solve any sudoku puzzle"
+  },
+  {
+    "id" : "2",
+    "name" : "Portfolio Website",
+    "image" : "portfolioWebsite.png",
+    "description" : "This very website!"
+  },
+  {
+    "id" : "3",
+    "name" : "Kindle to Zotero",
+    "image" : "",
+    "description" : "Transfer notes and highlights from your Kindle to Zotero for easy reference management"
+  }
+]

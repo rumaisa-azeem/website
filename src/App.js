@@ -2,12 +2,23 @@
 import Header from './sections/header';
 import Body from "./sections/body";
 import Footer from "./sections/footer";
+import Navbar from "./components/navbar";
+import Hero from "./components/hero";
+import Button from "./components/button";
+import React from "react";
 
 function App() {
     return (
-        <div className="App">
-            <Header />
-            <Body />
+        <div>
+            <Navbar/>
+            <main className="">
+                <Hero />
+                <div id="intro" className="">
+                    <p>Window width: {window.innerWidth}</p>
+                </div>
+                <Button/>
+                <div className="h-screen" />
+            </main>
             <Footer />
         </div>
     );

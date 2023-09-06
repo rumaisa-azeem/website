@@ -2,13 +2,42 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './styles/index.css';
 import App from './App';
+import AboutMe from './AboutMe';
+import CV from './CV';
+import Projects from './Projects';
+import Contact from './Contact';
 import reportWebVitals from './tests/reportWebVitals';
+import {createBrowserRouter, RouterProvider} from "react-router-dom";
 
+const router = createBrowserRouter(
+    [
+        {
+            path:"/",
+            element: <App />
+        },
+        {
+            path:"/aboutme",
+            element: <AboutMe />
+        },
+        {
+            path:"/projects",
+            element: <Projects />
+        },
+        {
+            path:"/cv-experience",
+            element: <CV />
+        },
+        {
+            path:"/contact",
+            element: <Contact />
+        },
+    ]
+);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 

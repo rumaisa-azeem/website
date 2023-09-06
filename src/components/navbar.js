@@ -1,20 +1,26 @@
 import React from 'react';
 import logo from '../assets/logo2.png';
+import { NavLink } from "react-router-dom";
 
-const navigation = [
-    { name: 'About Me', href: '#' },
-    { name: 'Projects', href: '#' },
-    { name: 'CV & Experience', href: '#'},
-    { name: 'Contact', href: '#'},
-]
+export default function Navbar({backgroundStyle}) {
 
-export default function Navbar() {
+    const navigation = [
+        { name: 'About Me', link: '/aboutme' },
+        { name: 'Projects', link: '/projects' },
+        { name: 'CV & Experience', link: '/cv-experience'},
+        { name: 'Contact', link: '/contact'},
+    ]
+
+    let styles = "w-screen absolute items-center flex justify-between py-3 "
+    if (backgroundStyle != null) {
+        styles += backgroundStyle
+    }
 
     return (
-        <nav className="w-screen absolute items-center flex justify-between mt-3">
-            <Logo className="h-12 pl-3"/>
+        <nav className={styles}>
+            <NavLink to="/"><Logo className="h-12 pl-3"/></NavLink>
             <div className="hidden justify-end md:flex divide-x-2 divide-slate-400 bg-white/20 rounded-md py-3 mr-3">
-                {navigation.map(entry => <NavButton name={entry.name} link={entry.href}/>)}
+                {navigation.map(entry => <NavButton key={entry.name} name={entry.name} link={entry.link}/>)}
             </div>
         </nav>
     );
@@ -24,11 +30,11 @@ export default function Navbar() {
 
 function NavButton({name, link}) {
     return (
-        <a href={link} className="flex-initial px-5">
+        <NavLink to={link} className="flex-initial px-5">
             <button className="hover:bg-slate-400/30 rounded-md w-full font-semibold px-5">
                 {name}
             </button>
-        </a>
+        </NavLink>
     );
 }
 

@@ -7,12 +7,12 @@ import { Link, animateScroll as scroll } from "react-scroll";
 export default function Hero() {
     // let heroHeight = window.screen.height / 2;
     let mainHeaderText = "Hi, I'm Rumaisa.";
-    let taglineText = "> pls give me job";
+    let taglineText = "> I study Computer Science with Management";
     return(
-        <div id="hero" className="container-2xl h-screen flex flex-col justify-center bg-gradient-to-br from-purple-300 to-cyan-100">
+        <div id="hero" className=" h-screen flex flex-col justify-center bg-gradient-to-br from-purple-300 to-cyan-100 md:pt-20">
             <div className="p-10 flex flex-col-reverse lg:flex-row">
                 <div id="hero_text" className="flex basis-1/2 xl:basis-7/12 flex-col justify-center text-center lg:text-left space-y-3 lg:pl-10 ">
-                    <h1 className="text-8xl font-extrabold">{mainHeaderText}</h1>
+                    <h1 className="text-5xl sm:text-7xl lg:text-8xl font-extrabold">{mainHeaderText}</h1>
                     <p className="text-xl font-mono">{taglineText}</p>
                     <div id="hero_buttons" className="flex space-x-3 justify-center lg:justify-start">
                         <a href="https://linkedin.com/in/rumaisa-azeem"><img src={linkedinIcon} className="h-10"/></a>
@@ -24,7 +24,8 @@ export default function Hero() {
                 </div>
             </div>
             <div id="hero_intro" className="text-center text-2xl lg:mt-10 hover:font-bold" onClick={clickIntro}>
-                <Link to="intro" smooth={true} duration={500}>
+                <Link activeClass="active" to="intro" smooth={true} duration={500}
+                >
                     <p>Nice to meet you! Let me introduce myself...</p>
                 </Link>
             </div>
