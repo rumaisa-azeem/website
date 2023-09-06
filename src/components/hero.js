@@ -23,12 +23,12 @@ export default function Hero() {
                     <img src={profilePic} alt='profile picture' className="rounded-full drop-shadow-lg bg-white mx-auto w-96"/>
                 </div>
             </div>
-            <div id="hero_intro" className="text-center text-2xl lg:mt-10 hover:font-bold" onClick={clickIntro}>
-                <Link activeClass="active" to="intro" smooth={true} duration={500}
-                >
-                    <p>Nice to meet you! Let me introduce myself...</p>
-                </Link>
-            </div>
+            {/*<div id="hero_intro" className="text-center text-2xl lg:mt-10 hover:font-bold" onClick={clickIntro}>*/}
+            {/*    /!*<Link activeClass="active" to="intro" smooth={true} duration={500}*!/*/}
+            {/*    /!*>*!/*/}
+            {/*    /!*    <p>Nice to meet you! Let me introduce myself...</p>*!/*/}
+            {/*    /!*</Link>*!/*/}
+            {/*</div>*/}
         </div>
     )
 }

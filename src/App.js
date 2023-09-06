@@ -13,11 +13,6 @@ function App() {
             <Navbar/>
             <main className="">
                 <Hero />
-                <div id="intro" className="">
-                    <p>Window width: {window.innerWidth}</p>
-                </div>
-                <Button/>
-                <div className="h-screen" />
             </main>
             <Footer />
         </div>
