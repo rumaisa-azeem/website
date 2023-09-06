@@ -1,7 +1,5 @@
 import React from 'react';
-import logo from '../assets/logo.svg';
-// import { Disclosure } from "@headlessui/react";
-// import { ChevronRightIcon } from '@heroicons/react/20/solid';
+import logo from '../assets/logo2.png';
 
 const navigation = [
     { name: 'About Me', href: '#' },
@@ -11,33 +9,23 @@ const navigation = [
 ]
 
 export default function Navbar() {
-    const navButtons = navigation.map(
-        entry => <NavButton name={entry.name} link={entry.href}/>
-    );
 
     return (
-        <nav className="w-screen bg-gray-800 py-2 px-1">
-            <Logo className="w-16 md:w-20 float-left"/>
-            <div className="w-auto hidden justify-end md:flex">
-                {navButtons}
+        <nav className="w-screen absolute items-center flex justify-between mt-3">
+            <Logo className="h-12 pl-3"/>
+            <div className="hidden justify-end md:flex divide-x-2 divide-slate-400 bg-white/20 rounded-md py-3 mr-3">
+                {navigation.map(entry => <NavButton name={entry.name} link={entry.href}/>)}
             </div>
         </nav>
     );
-
-    // return (
-    //     <nav className="mx-auto w-screen bg-gray-800 py-2 px-1 items-center flex">
-    //         <Logo className="w-16 md:w-20" />
-    //         <div id="navButtons" className="mx-auto border hidden xs:flex xs:flex-row">
-    //             {navButtons}
-    //         </div>
-    //     </nav>
-    // );
 }
+
+// old logo styling: h-12 rounded-full bg-white ml-3 drop-shadow-md
 
 function NavButton({name, link}) {
     return (
-        <a href={link} className="flex-initial mx-1.5 w-60 ">
-            <button className="bg-gray-600 hover:bg-gray-500 focus:bg-gray-500 rounded-md text-amber-50 p-2 md:p-4 w-full">
+        <a href={link} className="flex-initial px-5">
+            <button className="hover:bg-slate-400/30 rounded-md w-full font-semibold px-5">
                 {name}
             </button>
         </a>
@@ -46,7 +34,7 @@ function NavButton({name, link}) {
 
 function Logo({ className }) {
     return (
-        <img id='logo' src={logo} className={className} alt="logo" />
+        <img id='' src={logo} className={className} alt="logo" />
     );
 }
 
@@ -54,6 +42,8 @@ function Logo({ className }) {
 // import { Fragment } from 'react'
 // import { Disclosure } from '@headlessui/react'
 // import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
+// import { ChevronRightIcon } from '@heroicons/react/20/solid';
+
 
 //
 // function classNames(...classes) {
