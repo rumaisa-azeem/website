@@ -2,7 +2,7 @@ import React from 'react';
 import logo from '../assets/logo2.png';
 import { NavLink } from "react-router-dom";
 
-export default function Navbar({backgroundStyle}) {
+export default function Navbar({backgroundStyle: extraStyles}) {
 
     const navigation = [
         { name: 'About Me', link: '/aboutme' },
@@ -11,9 +11,9 @@ export default function Navbar({backgroundStyle}) {
         { name: 'Contact', link: '/contact'},
     ]
 
-    let styles = "w-screen absolute items-center flex justify-between py-3 "
-    if (backgroundStyle != null) {
-        styles += backgroundStyle
+    let styles = "w-screen items-center flex justify-between py-3 "
+    if (extraStyles != null) {
+        styles += extraStyles
     }
 
     return (
