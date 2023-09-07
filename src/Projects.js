@@ -9,14 +9,14 @@ export default function Projects() {
             <ProjectCard name={project.name} description={project.description} image={project.image}/>
     )
     return (
-        <main className="bg-slate-300">
-            <Navbar/>
-            <main className="h-screen w-11/12 2xl:container mx-auto flex flex-col justify-center">
-                <h1 className="text-black text-6xl font-extrabold">Projects</h1>
-                <div id="projectCards" className="flex justify-items-stretch space-x-5 mt-12">
-                    {projectCards}
+        <main>
+            <Navbar backgroundStyle="bg-slate-300"/>
+            <div className="h-screen flex justify-center">
+                <div className="self-center">
+                    <h1 className="text-black text-6xl font-extrabold align-middle">Projects</h1>
+                    <p className="text-black text-center">Coming soon...</p>
                 </div>
-            </main>
+            </div>
             <Footer />
         </main>
     )

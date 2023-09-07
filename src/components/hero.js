@@ -24,9 +24,10 @@ export default function Hero() {
                 </div>
             </div>
             {/*<div id="hero_intro" className="text-center text-2xl lg:mt-10 hover:font-bold" onClick={clickIntro}>*/}
-            {/*    <Link activeClass="active" to="intro" smooth={true} duration={500}>*/}
-            {/*        <p>Nice to meet you! Let me introduce myself...</p>*/}
-            {/*    </Link>*/}
+            {/*    /!*<Link activeClass="active" to="intro" smooth={true} duration={500}*!/*/}
+            {/*    /!*>*!/*/}
+            {/*    /!*    <p>Nice to meet you! Let me introduce myself...</p>*!/*/}
+            {/*    /!*</Link>*!/*/}
             {/*</div>*/}
         </div>
     )
