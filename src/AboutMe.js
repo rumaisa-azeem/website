@@ -20,9 +20,9 @@ export default function AboutMe() {
     return (
         <div>
             <Navbar backgroundStyle="bg-slate-300"/>
-            <main className="min-h-screen relative w-11/12 2xl:container mx-auto flex flex-col md:justify-center md:-translate-y-16 -z-10 border-black">
-                <div className="p-5 md:p-0 flex-col flex md:flex-row align-top md:mt-20 lg:mt-0">
-                    <h2 className="md:hidden text-black text-6xl font-extrabold pb-5">About Me</h2>
+            <main className="min-h-screen relative w-11/12 2xl:container mx-auto flex flex-col md:justify-center -mb-16">
+                <div className="p-5 md:p-0 flex-col flex md:flex-row align-top md:-mt-16">
+                    <h2 className="md:hidden -z-50 text-black text-6xl font-extrabold pb-5">About Me</h2>
                     <div id="side-col" className="basis-1/4 border-t border-t-slate-300 border-b border-b-slate-300 py-5
                      md:py-0 md:border-none flex items-center space-x-4 md:mr-20 md:space-x-0 md:flex-col md:space-y-4 ">
                         <div className="xs:basis-1/4">
