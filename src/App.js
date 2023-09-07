@@ -11,7 +11,7 @@ function App() {
     return (
         <div>
             <Navbar/>
-            <main className="">
+            <main className="relative -z-50 -translate-y-20">
                 <Hero />
             </main>
             <Footer />
