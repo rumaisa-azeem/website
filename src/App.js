@@ -10,8 +10,8 @@ import React from "react";
 function App() {
     return (
         <div>
-            <Navbar/>
-            <main className="">
+            <Navbar extraStyles=""/>
+            <main className="-mt-20 -z-50 ">
                 <Hero />
             </main>
             <Footer />

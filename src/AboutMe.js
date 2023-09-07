@@ -20,22 +20,30 @@ export default function AboutMe() {
     return (
         <div>
             <Navbar backgroundStyle="bg-slate-300"/>
-            <main className="h-screen w-11/12 2xl:container mx-auto flex justify-center items-center space-x-20">
-                <div id="side-col" className="basis-1/5 flex flex-col space-y-4">
-                    <img src={profilePic} alt='profile picture' className="rounded-full drop-shadow-lg w-96"/>
-                    <h2 className="text-4xl text-center font-bold">Rumaisa Azeem</h2>
-                    <div className="px-5">
-                        <p className="text-bold">London/Manchester</p>
-                        <a href="mailto:rumaisa.azeem0@gmail.com"><p>rumaisa.azeem0@gmail.com</p></a>
-                        <a href="https://linkedin.com/in/rumaisa-azeem"><p>linkedin.com/in/rumaisa-azeem</p></a>
-                        <br/>
-                        <p>BSc Computer Science with Management</p>
+            <main className="min-h-screen relative w-11/12 2xl:container mx-auto flex flex-col md:justify-center md:-translate-y-16 -z-10 border-black">
+                <div className="p-5 md:p-0 flex-col flex md:flex-row align-top md:mt-20 lg:mt-0">
+                    <h2 className="md:hidden text-black text-6xl font-extrabold pb-5">About Me</h2>
+                    <div id="side-col" className="basis-1/4 border-t border-t-slate-300 border-b border-b-slate-300 py-5
+                     md:py-0 md:border-none flex items-center space-x-4 md:mr-20 md:space-x-0 md:flex-col md:space-y-4 ">
+                        <div className="xs:basis-1/4">
+                            <img src={profilePic} alt='profile picture' className="rounded-full drop-shadow-md"/>
+                        </div>
+                        <div className="">
+                            <h2 className="text-base font-bold">Rumaisa Azeem</h2>
+                            <div className="">
+                                <p className="text-bold">London/Manchester</p>
+                                <p>BSc Computer Science with Management</p>
+                                <a href="mailto:rumaisa.azeem0@gmail.com"><p>rumaisa.azeem0@gmail.com</p></a>
+                                <a href="https://linkedin.com/in/rumaisa-azeem"><p>linkedin.com/in/rumaisa-azeem</p></a>
+                            </div>
+                        </div>
                     </div>
 
-                </div>
-                <div id="main-col" className="basis-2/3">
-                    <h1 className="text-black text-6xl font-extrabold">About Me</h1>
-                    <div className="text-black">{aboutBody}</div>
+                    <div id="main-col" className="basis-3/4 ">
+                        <h1 className="hidden md:block text-black text-6xl font-extrabold">About Me</h1>
+                        <div className="text-black">{aboutBody}</div>
+                    </div>
+
                 </div>
             </main>
             <Footer />
