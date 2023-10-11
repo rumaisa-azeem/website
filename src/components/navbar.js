@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../assets/logo2.png';
+import logo from '../assets/logo3.png';
 import { NavLink } from "react-router-dom";
 
 export default function Navbar({backgroundStyle: extraStyles}) {
