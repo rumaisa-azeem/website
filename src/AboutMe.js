@@ -42,6 +42,7 @@ export default function AboutMe() {
                     <div id="main-col" className="basis-3/4 ">
                         <h1 className="hidden md:block text-black text-6xl font-extrabold">About Me</h1>
                         <div className="text-black">{aboutBody}</div>
+                        <div className="h-28 md:h-0"></div>
                     </div>
 
                 </div>
