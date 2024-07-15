@@ -1,6 +1,6 @@
 import Button from "../components/button.js";
 import React from "react";
-import Hero from "../components/hero";
+import Hero from "./hero";
 
 export default function Body() {
     return (

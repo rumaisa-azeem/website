@@ -2,7 +2,7 @@ import React from "react";
 import profilePic from '../assets/profilePic.png';
 import linkedinIcon from '../assets/linkedin.svg';
 import githubIcon from '../assets/github.svg';
-import IconButton from "./IconButton";
+import IconButton from "../components/IconButton";
 import { Link, animateScroll as scroll } from "react-scroll";
 
 export default function Hero() {
