@@ -1,9 +1,6 @@
 import React from "react";
 import profilePic from '../assets/profilePic.png';
-import linkedinIcon from '../assets/linkedin.svg';
-import githubIcon from '../assets/github.svg';
-import IconButton from "../components/IconButton";
-import { Link, animateScroll as scroll } from "react-scroll";
+import {LinkedIn, GitHub} from "@mui/icons-material";
 
 export default function Hero() {
     const mainHeaderText = "Hi, I'm Rumaisa.";
@@ -14,9 +11,13 @@ export default function Hero() {
                 <div id="hero_text" className="flex basis-1/2 xl:basis-7/12 flex-col justify-center text-center lg:text-left space-y-3 lg:pl-10 ">
                     <h1 className="text-4xl sm:text-7xl lg:text-8xl font-extrabold">{mainHeaderText}</h1>
                     <p className="text-xl font-mono">{taglineText}</p>
-                    <div id="hero_buttons" className="flex space-x-3 justify-center lg:justify-start">
-                        <IconButton href="https://linkedin.com/in/rumaisa-azeem" imgSrc={linkedinIcon}/>
-                        <IconButton href="https://github.com/rumaisa-azeem" imgSrc={githubIcon}/>
+                    <div id="hero_buttons" className="flex space-x-2 justify-center items-center lg:justify-start">
+                        <a href="https://github.com/rumaisa-azeem" className="text-[40px] hover:translate-y-1 transition ease-in-out">
+                            <GitHub fontSize="inherit"/>
+                        </a>
+                        <a href="https://linkedin.com/in/rumaisa-azeem" className="text-[45px] hover:translate-y-1 transition ease-in-out">
+                            <LinkedIn fontSize="inherit"/>
+                        </a>
                     </div>
                 </div>
                 <div id="hero_image" className="shrink-0 basis-1/2 xl:basis-5/12  mb-8 lg:my-auto">
