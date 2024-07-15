@@ -2,6 +2,7 @@ import React from "react";
 import profilePic from '../assets/profilePic.png';
 import linkedinIcon from '../assets/linkedin.svg';
 import githubIcon from '../assets/github.svg';
+import IconButton from "./IconButton";
 import { Link, animateScroll as scroll } from "react-scroll";
 
 export default function Hero() {
@@ -14,8 +15,8 @@ export default function Hero() {
                     <h1 className="text-4xl sm:text-7xl lg:text-8xl font-extrabold">{mainHeaderText}</h1>
                     <p className="text-xl font-mono">{taglineText}</p>
                     <div id="hero_buttons" className="flex space-x-3 justify-center lg:justify-start">
-                        <a href="https://linkedin.com/in/rumaisa-azeem"><img src={linkedinIcon} className="h-10"/></a>
-                        <a href="https://github.com/rumaisa-azeem"><img src={githubIcon} className="h-10"/></a>
+                        <IconButton href="https://linkedin.com/in/rumaisa-azeem" imgSrc={linkedinIcon}/>
+                        <IconButton href="https://github.com/rumaisa-azeem" imgSrc={githubIcon}/>
                     </div>
                 </div>
                 <div id="hero_image" className="shrink-0 basis-1/2 xl:basis-5/12  mb-8 lg:my-auto">
