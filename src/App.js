@@ -11,7 +11,7 @@ function App() {
     return (
         <div>
             <Navbar extraStyles=""/>
-            <main className="-mt-20 -z-50 ">
+            <main className=" -z-50 ">
                 <Hero />
             </main>
             <Footer />

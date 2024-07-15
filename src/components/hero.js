@@ -5,9 +5,8 @@ import githubIcon from '../assets/github.svg';
 import { Link, animateScroll as scroll } from "react-scroll";
 
 export default function Hero() {
-    // let heroHeight = window.screen.height / 2;
-    let mainHeaderText = "Hi, I'm Rumaisa.";
-    let taglineText = "> I study Computer Science with Management";
+    const mainHeaderText = "Hi, I'm Rumaisa.";
+    const taglineText = "> I study Computer Science with Management";
     return(
         <div id="hero" className="h-screen flex flex-col justify-center bg-gradient-to-br from-purple-300 to-cyan-100 md:pt-20">
             <div className="p-10 flex flex-col-reverse lg:flex-row">
