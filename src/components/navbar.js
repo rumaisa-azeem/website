@@ -1,58 +1,42 @@
 import React from 'react';
 import logo from '../assets/logo3.png';
 import { NavLink } from "react-router-dom";
+import { Link } from "react-scroll";
 
 export default function Navbar({props}) {
 
     const navigation = [
-        { name: 'About Me', link: '/aboutme' },
-        { name: 'Projects', link: '/projects' },
-        { name: 'CV & Experience', link: '/cv-experience'},
+        { name: 'About Me', link: 'about-me-section' },
+        { name: 'Projects', link: 'projects-section' },
+        { name: 'CV & Experience', link: 'cv-experience-section'},
         { name: 'Contact', link: '/contact'},
     ]
 
-    let styles = "w-screen items-center flex justify-between py-3 "
-    // if (extraStyles != null) {
-    //     styles += extraStyles
-    // }
-
     return (
-        // <nav className={styles}>
-        //     <NavLink to="/"><Logo className="h-12 pl-3"/></NavLink>
-        //     <div className="hidden justify-end md:flex divide-x-2 divide-slate-400 bg-white/20 rounded-md py-3 mr-3">
-        //         {navigation.map(entry => <NavButton key={entry.name} name={entry.name} link={entry.link}/>)}
-        //     </div>
-        // </nav>
         <div className="fixed w-screen top-0 z-40 py-4 px-6 flex flex-row gap-4 items-center justify-between">
             <NavLink to="/" className="hover:translate-y-1 transition ease-in-out"><Logo className="h-12"/></NavLink>
             <div className="hidden justify-end md:flex divide-x-2 divide-slate-400 bg-white/20 rounded-md py-3">
                 {navigation.map(entry => <NavButton key={entry.name} name={entry.name} link={entry.link}/>)}
             </div>
-            {/*<div className="flex border border-red-500 flex-row gap-1 items-center ">*/}
-            {/*    {[1,2,3].map(item =>*/}
-            {/*        <a href="#" target="_blank" className="hover:translate-y-1 transition ease-in-out" rel="noreferrer">*/}
-            {/*            link {item.toString()}*/}
-            {/*        </a>)}*/}
-            {/*</div>*/}
         </div>
     );
 }
 
-// old logo styling: h-12 rounded-full bg-white ml-3 drop-shadow-md
-
 function NavButton({name, link}) {
     return (
-        <NavLink to={link} className="flex-initial px-5">
+        <Link to={link} className="flex-initial px-5" smooth="easeInOutQuad">
             <button className="hover:bg-slate-400/30 rounded-md w-full font-semibold px-5 transition ease-in-out duration-500">
                 {name}
             </button>
-        </NavLink>
+        </Link>
     );
 }
 
 function Logo({ className }) {
     return (
-        <img id='' src={logo} className={className} alt="logo" />
+        <Link to="hero-section" smooth="easeInOutQuad">
+            <img src={logo} className={className} alt="logo" />
+        </Link>
     );
 }
 

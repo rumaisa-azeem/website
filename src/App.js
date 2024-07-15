@@ -1,18 +1,30 @@
 // import './styles/App.css';
-import Header from './sections/header';
-import Body from "./sections/body";
 import Footer from "./sections/footer";
 import Navbar from "./components/navbar";
 import Hero from "./sections/hero";
-import Button from "./components/button";
 import React from "react";
+
+import { Link, animateScroll as scroll } from "react-scroll";
 
 function App() {
     return (
         <div>
-            <Navbar extraStyles=""/>
-            <main className=" -z-50 ">
+            <Navbar/>
+            <main>
                 <Hero />
+
+                <section className="h-screen p-6 flex flex-col justify-center border-b border-gray-300" id="about-me-section">
+                    <h1 className="text-4xl font-extrabold">About Me</h1>
+                </section>
+
+                <section className="h-screen p-6 flex flex-col justify-center border-b border-gray-300" id="projects-section">
+                    <h1 className="text-4xl font-extrabold">Projects</h1>
+                </section>
+
+                <section className="h-screen p-6 flex flex-col justify-center border-b border-gray-300" id="cv-experience-section">
+                    <h1 className="text-4xl font-extrabold">CV & Experience</h1>
+                </section>
+
             </main>
             <Footer />
         </div>
