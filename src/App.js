@@ -4,12 +4,13 @@ import Navbar from "./components/navbar";
 import Hero from "./sections/hero";
 import React from "react";
 
-import { Link, animateScroll as scroll } from "react-scroll";
+// TODO: snap scrolling between sections
+// TODO: compress profile pic
 
 function App() {
     return (
         <div>
-            <Navbar/>
+            <Navbar />
             <main>
                 <Hero />
 

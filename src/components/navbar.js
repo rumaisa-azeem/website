@@ -1,125 +1,52 @@
 import React from 'react';
 import logo from '../assets/logo3.png';
-import { NavLink } from "react-router-dom";
-import { Link } from "react-scroll";
+import IconButton from "../components/IconButton";
+
+import { Link as ScrollLink } from "react-scroll";
+import {Navbar as FlowbiteNavbar, NavbarBrand, NavbarCollapse, NavbarLink, NavbarToggle} from "flowbite-react";
 
 export default function Navbar({props}) {
 
-    const navigation = [
+    const navList = [
         { name: 'About Me', link: 'about-me-section' },
         { name: 'Projects', link: 'projects-section' },
         { name: 'CV & Experience', link: 'cv-experience-section'},
         { name: 'Contact', link: '/contact'},
-    ]
+    ];
+
+    const navbarTheme = {
+        "root": {
+            "base": "fixed w-screen z-10 px-2 py-2.5 dark:border-gray-700 dark:bg-gray-800 sm:px-4",
+        },
+        "collapse": {
+            "base": "w-full rounded bg-white md:bg-transparent md:block md:w-auto",
+        },
+        "link": {
+            "base": "block py-2 pl-3 pr-4 md:p-0",
+            "active": {
+                "on": "bg-cyan-700 text-white dark:text-white md:bg-transparent md:text-cyan-700",
+                "off": "border-b border-gray-100 text-gray-700 hover:bg-gray-50 md:border-0 md:hover:bg-transparent md:hover:translate-y-1 transition ease-in-out " +
+                    "md:dark:hover:bg-transparent md:dark:hover:text-white dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+            // TODO: border-b causes border on last list element, change to use flex so no border on last item
+            }
+        },
+    };
 
     return (
-        <div className="fixed w-screen top-0 z-40 py-4 px-6 flex flex-row gap-4 items-center justify-between">
-            <NavLink to="/" className="hover:translate-y-1 transition ease-in-out"><Logo className="h-12"/></NavLink>
-            <div className="hidden justify-end md:flex divide-x-2 divide-slate-400 bg-white/20 rounded-md py-3">
-                {navigation.map(entry => <NavButton key={entry.name} name={entry.name} link={entry.link}/>)}
-            </div>
-        </div>
+        <FlowbiteNavbar fluid theme={navbarTheme}>
+            <NavbarBrand>
+                <ScrollLink to="hero-section" smooth="easeInOutQuad">
+                    <IconButton imgSrc={logo} />
+                </ScrollLink>
+            </NavbarBrand>
+            <NavbarToggle />
+            <NavbarCollapse>
+                {navList.map((nav) =>
+                    <ScrollLink to={nav.link} smooth="easeInOutQuad">
+                        <NavbarLink href="#">{nav.name}</NavbarLink>
+                    </ScrollLink>
+                )}
+            </NavbarCollapse>
+        </FlowbiteNavbar>
     );
 }
-
-function NavButton({name, link}) {
-    return (
-        <Link to={link} className="flex-initial px-5" smooth="easeInOutQuad">
-            <button className="hover:bg-slate-400/30 rounded-md w-full font-semibold px-5 transition ease-in-out duration-500">
-                {name}
-            </button>
-        </Link>
-    );
-}
-
-function Logo({ className }) {
-    return (
-        <Link to="hero-section" smooth="easeInOutQuad">
-            <img src={logo} className={className} alt="logo" />
-        </Link>
-    );
-}
-
-
-// import { Fragment } from 'react'
-// import { Disclosure } from '@headlessui/react'
-// import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
-// import { ChevronRightIcon } from '@heroicons/react/20/solid';
-
-
-//
-// function classNames(...classes) {
-//     return classes.filter(Boolean).join(' ')
-// }
-
-// export default function Navbar() {
-//     return (
-//         <Disclosure as="nav" className="bg-gray-800">
-//             {({ open }) => (
-//                 <>
-//                     <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-//                         <div className="relative flex h-16 items-center justify-between">
-//                             <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
-//                                 {/* Mobile menu button*/}
-//                                 <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
-//                                     <span className="absolute -inset-0.5" />
-//                                     <span className="sr-only">Open main menu</span>
-//                                     {open ? (
-//                                         <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
-//                                     ) : (
-//                                         <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
-//                                     )}
-//                                 </Disclosure.Button>
-//                             </div>
-//                             <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-//                                 <div className="flex flex-shrink-0 items-center">
-//                                     <img
-//                                         className="h-8 w-auto"
-//                                         src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-//                                         alt="Your Company"
-//                                     />
-//                                 </div>
-//                                 <div className="hidden sm:ml-6 sm:block">
-//                                     <div className="flex space-x-4">
-//                                         {navigation.map((item) => (
-//                                             <a
-//                                                 key={item.name}
-//                                                 href={item.href}
-//                                                 className={classNames(
-//                                                     item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-//                                                     'rounded-md px-3 py-2 text-sm font-medium'
-//                                                 )}
-//                                                 aria-current={item.current ? 'page' : undefined}
-//                                             >
-//                                                 {item.name}
-//                                             </a>
-//                                         ))}
-//                                     </div>
-//                                 </div>
-//                             </div>
-//                         </div>
-//                     </div>
-//
-//                     <Disclosure.Panel className="sm:hidden">
-//                         <div className="space-y-1 px-2 pb-3 pt-2">
-//                             {navigation.map((item) => (
-//                                 <Disclosure.Button
-//                                     key={item.name}
-//                                     as="a"
-//                                     href={item.href}
-//                                     className={classNames(
-//                                         item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-//                                         'block rounded-md px-3 py-2 text-base font-medium'
-//                                     )}
-//                                     aria-current={item.current ? 'page' : undefined}
-//                                 >
-//                                     {item.name}
-//                                 </Disclosure.Button>
-//                             ))}
-//                         </div>
-//                     </Disclosure.Panel>
-//                 </>
-//             )}
-//         </Disclosure>
-//     )
-// }

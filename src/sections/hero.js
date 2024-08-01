@@ -6,7 +6,7 @@ export default function Hero() {
     const mainHeaderText = "Hi, I'm Rumaisa.";
     const taglineText = "> I study Computer Science with Management";
     return(
-        <div id="hero-section" className="h-screen flex flex-col justify-center bg-gradient-to-br from-purple-300 to-cyan-100 md:pt-20">
+        <div id="hero-section" className="h-screen flex flex-col justify-center bg-gradient-to-br from-purple-300 to-cyan-100 md:pt-10">
             <div className="p-10 flex flex-col-reverse lg:flex-row">
                 <div id="hero_text" className="flex basis-1/2 xl:basis-7/12 flex-col justify-center text-center lg:text-left space-y-3 lg:pl-10 ">
                     <h1 className="text-4xl sm:text-7xl lg:text-8xl font-extrabold">{mainHeaderText}</h1>
