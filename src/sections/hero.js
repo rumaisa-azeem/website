@@ -1,16 +1,36 @@
 import React from "react";
 import profilePic from '../assets/profilePic.png';
+
 import {LinkedIn, GitHub} from "@mui/icons-material";
+import Typewriter from "typewriter-effect";
 
 export default function Hero() {
     const mainHeaderText = "Hi, I'm Rumaisa.";
-    const taglineText = "> I study Computer Science with Management";
     return(
         <div id="hero-section" className="h-screen flex flex-col justify-center bg-gradient-to-br from-purple-300 to-cyan-100 md:pt-10">
             <div className="p-10 flex flex-col-reverse lg:flex-row">
                 <div id="hero_text" className="flex basis-1/2 xl:basis-7/12 flex-col justify-center text-center lg:text-left space-y-3 lg:pl-10 ">
                     <h1 className="text-4xl sm:text-7xl lg:text-8xl font-extrabold">{mainHeaderText}</h1>
-                    <p className="text-xl font-mono">{taglineText}</p>
+                    <Typewriter
+                        onInit={(typewriter) => {
+                            typewriter
+                                .callFunction(typewriterState => {
+                                    typewriterState.elements.wrapper.style.font = "18px source-code-pro, Menlo, Monaco, Consolas, monospace";
+                                })
+                                .changeDelay("natural")
+                                .changeDeleteSpeed(1)
+                                .typeString("> BSc Computer Science with Management @ King's College London")
+                                .pauseFor(2000)
+                                .deleteChars(60)
+                                .typeString("Software Engineer Intern @ Hewlett Packard Enterprise")
+                                .pauseFor(2000)
+                                .deleteChars(53)
+                                .typeString("AI Ethics Research @ King's College London")
+                                .pauseFor(2000)
+                                .start();
+                        }}
+                        options={{skipAddStyles:true, loop:true}}
+                    />
                     <div id="hero_buttons" className="flex space-x-2 justify-center items-center lg:justify-start">
                         <a href="https://github.com/rumaisa-azeem" className="text-[40px] hover:translate-y-1 transition ease-in-out">
                             <GitHub fontSize="inherit"/>
