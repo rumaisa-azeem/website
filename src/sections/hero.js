@@ -5,32 +5,30 @@ import {LinkedIn, GitHub} from "@mui/icons-material";
 import Typewriter from "typewriter-effect";
 
 export default function Hero() {
-    const mainHeaderText = "Hi, I'm Rumaisa.";
     return(
-        <div id="hero-section" className="h-screen flex flex-col justify-center bg-gradient-to-br from-purple-300 to-cyan-100 md:pt-10">
+        <div id="hero-section" className="h-screen flex flex-col justify-center md:pt-10">
             <div className="p-10 flex flex-col-reverse lg:flex-row">
                 <div id="hero_text" className="flex basis-1/2 xl:basis-7/12 flex-col justify-center text-center lg:text-left space-y-3 lg:pl-10 ">
-                    <h1 className="text-4xl sm:text-7xl lg:text-8xl font-extrabold">{mainHeaderText}</h1>
-                    <Typewriter
-                        onInit={(typewriter) => {
-                            typewriter
-                                .callFunction(typewriterState => {
-                                    typewriterState.elements.wrapper.style.font = "18px source-code-pro, Menlo, Monaco, Consolas, monospace";
-                                })
-                                .changeDelay("natural")
-                                .changeDeleteSpeed(1)
-                                .typeString("> BSc Computer Science with Management @ King's College London")
-                                .pauseFor(2000)
-                                .deleteChars(60)
-                                .typeString("Software Engineer Intern @ Hewlett Packard Enterprise")
-                                .pauseFor(2000)
-                                .deleteChars(53)
-                                .typeString("AI Ethics Research @ King's College London")
-                                .pauseFor(2000)
-                                .start();
-                        }}
-                        options={{skipAddStyles:true, loop:true}}
-                    />
+                    <h1 className="text-3xl sm:text-6xl lg:text-7xl font-extrabold font-display">hi, i'm rumaisa.</h1>
+                    <span className="text-2xl">
+                        <Typewriter
+                            onInit={(typewriter) => {
+                                typewriter
+                                    .changeDelay("natural")
+                                    .changeDeleteSpeed(1)
+                                    .typeString("> BSc Computer Science with Management @ King's College London")
+                                    .pauseFor(2000)
+                                    .deleteChars(60)
+                                    .typeString("Software Engineer Intern @ Hewlett Packard Enterprise")
+                                    .pauseFor(2000)
+                                    .deleteChars(53)
+                                    .typeString("AI Ethics Research @ King's College London")
+                                    .pauseFor(2000)
+                                    .start();
+                            }}
+                            options={{skipAddStyles:true, loop:true}}
+                        />
+                    </span>
                     <div id="hero_buttons" className="flex space-x-2 justify-center items-center lg:justify-start">
                         <a href="https://github.com/rumaisa-azeem" className="text-[40px] hover:translate-y-1 transition ease-in-out">
                             <GitHub fontSize="inherit"/>
@@ -41,20 +39,9 @@ export default function Hero() {
                     </div>
                 </div>
                 <div id="hero_image" className="shrink-0 basis-1/2 xl:basis-5/12  mb-8 lg:my-auto">
-                    <img src={profilePic} alt='profile picture' className="rounded-full drop-shadow-lg bg-white mx-auto w-96"/>
+                    <img src={profilePic} alt='profile picture' className="rounded-full bg-white mx-auto w-96"/>
                 </div>
             </div>
-            {/*<div id="hero_intro" className="text-center text-2xl lg:mt-10 hover:font-bold" onClick={clickIntro}>*/}
-            {/*    /!*<Link activeClass="active" to="intro" smooth={true} duration={500}*!/*/}
-            {/*    /!*>*!/*/}
-            {/*    /!*    <p>Nice to meet you! Let me introduce myself...</p>*!/*/}
-            {/*    /!*</Link>*!/*/}
-            {/*</div>*/}
         </div>
     )
-}
-
-function clickIntro(e) {
-    console.log("intro clicked")
-    document.getElementById("intro").scrollIntoView(true);
 }
