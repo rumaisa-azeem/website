@@ -12,8 +12,8 @@ export default function Navbar({props}) {
 
     const navList = [
         { name: 'About', link: 'about-me-section' },
-        { name: 'Projects', link: 'projects-section' },
         { name: 'CV & Experience', link: 'cv-experience-section'},
+        { name: 'Projects', link: 'projects-section' },
         { name: 'Contact', link: '/contact'},
     ];
 
