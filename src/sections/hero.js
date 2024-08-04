@@ -4,13 +4,15 @@ import profilePic from '../assets/profilePic.png';
 import {LinkedIn, GitHub} from "@mui/icons-material";
 import Typewriter from "typewriter-effect";
 
+import Window from "../components/Window";
+
 export default function Hero() {
     return(
         <div id="hero-section" className="h-screen flex flex-col justify-center md:pt-10">
-            <div className="p-10 flex flex-col-reverse lg:flex-row">
-                <div id="hero_text" className="flex basis-1/2 xl:basis-7/12 flex-col justify-center text-center lg:text-left space-y-3 lg:pl-10 ">
-                    <h1 className="text-3xl sm:text-6xl lg:text-7xl font-extrabold font-display">hi, i'm rumaisa.</h1>
-                    <span className="text-2xl">
+            <div className="p-10 container mx-auto xs:pt-24 flex flex-col-reverse lg:flex-row">
+                <div id="hero_text" className="flex basis-1/2 xl:basis-7/12 flex-col justify-center text-center lg:text-left space-y-3">
+                    <h1 className="text-2xl xs:text-6xl lg:text-7xl font-extrabold font-display">hi, i'm rumaisa.</h1>
+                    <span className="xs:text-2xl">
                         <Typewriter
                             onInit={(typewriter) => {
                                 typewriter
@@ -38,7 +40,7 @@ export default function Hero() {
                         </a>
                     </div>
                 </div>
-                <div id="hero_image" className="shrink-0 basis-1/2 xl:basis-5/12  mb-8 lg:my-auto">
+                <div id="hero_image" className="shrink-0 basis-1/2 xl:basis-5/12 mb-10 lg:my-auto w-fit mx-auto black h-96">
                     <img src={profilePic} alt='profile picture' className="rounded-full bg-white mx-auto w-96"/>
                 </div>
             </div>
