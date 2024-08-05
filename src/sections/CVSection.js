@@ -2,6 +2,10 @@ import React, {useState} from "react";
 import Window from "../components/Window"
 import {Download} from "@mui/icons-material";
 
+import downloadEarth from "../assets/downloadEarth.png";
+import downloadFolder from "../assets/downloadFolder.png";
+import downloadFile from "../assets/downloadFile.png";
+
 const EDUCATION_TAB  = "education-tab";
 const EXPERIENCE_TAB = "experience-tab";
 const SKILLS_TAB = "skills-tab";
@@ -23,25 +27,37 @@ export default function CVSection() {
     }
 
     return (
-        <div className={"grid grid-rows-1 grid-cols-3 md:container mx-auto gap-6 h-full"}>
+        <div className={"space-y-6 lg:space-y-0 lg:grid grid-rows-1 grid-cols-3 mx-auto lg:container lg:gap-6 lg:h-full lg:px-4"}>
 
-            <div className={"col-span-1 space-y-24 mt-24"}>
+            <div className={"lg:col-span-1 space-y-16 lg:mt-24"}>
+
                 <div className={"pb-5 mx-auto w-fit"}>
-                    <Window className={"w-72 h-32 absolute"} bgColor={"bg-green-100"} />
+                    <Window className={"w-72 h-48 xs:h-40 md:h-32 absolute"} bgColor={"bg-green-100"} />
                     <Window className={"w-72 translate-y-5 translate-x-2"} bgColor={"bg-cyan-100"}>
                         <h1 className="text-4xl font-extrabold">CV & Experience</h1>
+                        <a href={"#"} className={"lg:hidden text-blue-600 float-right"}>
+                            <Download className={"me-1"}/>
+                            Download CV
+                        </a>
                     </Window>
                 </div>
-                <Window className={"w-2/3"}>
+
+                <Window className={"hidden lg:flex w-3/5 mx-auto"}>
+                    <div className={"flex justify-between mb-2"}>
+                        <img src={downloadEarth} className={"h-10 xl:h-12"} />
+                        <img src={downloadFile} className={"h-6 xl:h-8 pl-4 xl:pl-6"} />
+                        <img src={downloadFolder} className={"h-10 xl:h-12"} />
+                    </div>
                     <a href={"#"} className={"text-blue-600"}>
                         <Download className={"me-1"}/>
                         Download CV
                     </a>
                 </Window>
+
             </div>
 
-            <div className={"col-span-2"}>
-                <div className={`rounded-lg border-2 border-gray-500 p-2 drop-shadow-lg flex flex-col gap-3 bg-pink-200 mt-12 h-4/5`}>
+            <div className={"px-4 lg:p-0 lg:col-span-2"}>
+                <div className={`rounded-lg border-2 border-gray-500 p-2 drop-shadow-lg flex flex-col gap-3 bg-pink-200 lg:mt-12 lg:h-4/5`}>
                     <div className={"flex gap-2 pt-1"}>
                         <div className={"bg-red-500 border-2 border-red-600 rounded-full h-4 w-4"}></div>
                         <div className={"bg-amber-400 border-2 border-amber-500 rounded-full h-4 w-4"}></div>
@@ -53,7 +69,7 @@ export default function CVSection() {
                             {/*<Tab id={SKILLS_TAB} tabText={"Skills"} className={""}/>*/}
                         </div>
                     </div>
-                    <div className={"h-full w-full bg-white rounded-lg p-4 pb-0 border-2 border-gray-400 overflow-y-scroll"}>
+                    <div className={"h-full w-full bg-white rounded-lg p-4 border-2 border-gray-400 overflow-y-scroll"}>
 
                         <div className={`space-y-3 ${activeTab !== EDUCATION_TAB ? "hidden" : ""}`}>
                             <div>
