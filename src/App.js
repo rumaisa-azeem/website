@@ -5,6 +5,7 @@ import Footer from "./sections/footer";
 import Hero from "./sections/hero";
 import AboutSection from "./sections/AboutSection";
 import Navbar from "./components/navbar";
+import CVSection from "./sections/CVSection";
 
 // TODO: snap scrolling between sections
 // TODO: compress profile pic
@@ -21,8 +22,8 @@ function App() {
                     <AboutSection/>
                 </section>
 
-                <section className="h-screen p-6 flex flex-col justify-center border-b border-gray-300" id="cv-experience-section">
-                    <h1 className="text-4xl font-extrabold">CV & Experience</h1>
+                <section className="h-screen pt-24 border-b border-gray-300" id="cv-experience-section">
+                    <CVSection />
                 </section>
 
                 <section className="h-screen p-6 flex flex-col justify-center border-b border-gray-300" id="projects-section">
