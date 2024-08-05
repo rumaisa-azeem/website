@@ -18,15 +18,15 @@ function App() {
             </div>
             <main>
                 <Hero />
-                <section className="md:h-screen p-4 md:pt-6 flex flex-col justify-center border-b border-gray-300" id="about-me-section">
+                <section className="md:h-screen p-4 pb-24 md:pt-32 flex flex-col justify-center" id="about-me-section">
                     <AboutSection/>
                 </section>
 
-                <section className="h-screen pt-24 border-b border-gray-300" id="cv-experience-section">
+                <section className="md:h-screen pt-6 md:pt-24" id="cv-experience-section">
                     <CVSection />
                 </section>
 
-                <section className="h-screen p-6 flex flex-col justify-center border-b border-gray-300" id="projects-section">
+                <section className="h-screen p-6 flex flex-col justify-center" id="projects-section">
                     <h1 className="text-4xl font-extrabold">Projects</h1>
                 </section>
 
