@@ -1,14 +1,33 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import logo from '../assets/logo3.png';
 import IconButton from "../components/IconButton";
 import {Terminal} from "@mui/icons-material";
 
-import { Link as ScrollLink } from "react-scroll";
+import {Link as ScrollLink, animateScroll, Events, scrollSpy} from "react-scroll";
 import {Navbar as FlowbiteNavbar, NavbarBrand, NavbarCollapse, NavbarLink, NavbarToggle} from "flowbite-react";
 
 export default function Navbar({props}) {
 
-    if (window.innerHeight < 768) console.log("adding scroll offset");
+    if (window.innerWidth <= 768) {
+        document.documentElement.style.scrollSnapType = "none";
+    }
+
+    useEffect(() => {
+        if (window.innerHeight > 768) {
+            Events.scrollEvent.register('begin', (to, element) => {
+                document.documentElement.style.scrollSnapType = 'none';
+            });
+            Events.scrollEvent.register('end', (to, element) => {
+                document.documentElement.style.scrollSnapType = 'y mandatory';
+            });
+            scrollSpy.update();
+
+            return () => {
+                Events.scrollEvent.remove('begin');
+                Events.scrollEvent.remove('end');
+            }
+        }
+    }, []);
 
     const navList = [
         { name: 'About', link: 'about-me-section' },
@@ -54,8 +73,8 @@ export default function Navbar({props}) {
             <NavbarToggle />
             <NavbarCollapse>
                 {navList.map((nav) =>
-                    <ScrollLink to={nav.link} smooth="easeInOutQuad" offset={window.innerHeight < 768 ? -80 : 0}>
-                        <NavbarLink href="#">{nav.name}</NavbarLink>
+                    <ScrollLink to={nav.link} smooth="easeInOutQuad" offset={window.innerHeight < 768 ? -80 : 0} className={'cursor-pointer transition ease-in-out'} activeClass={"text-blue-600"} spy={true}>
+                        <NavbarLink>{nav.name}</NavbarLink>
                     </ScrollLink>
                 )}
             </NavbarCollapse>
