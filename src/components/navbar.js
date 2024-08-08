@@ -8,8 +8,8 @@ import {Navbar as FlowbiteNavbar, NavbarBrand, NavbarCollapse, NavbarLink, Navba
 
 export default function Navbar({props}) {
 
-    if (window.innerWidth <= 768) {
-        document.documentElement.style.scrollSnapType = "none";
+    if (window.innerWidth > 768) {
+        document.documentElement.style.scrollSnapType = "y mandatory";
     }
 
     useEffect(() => {
