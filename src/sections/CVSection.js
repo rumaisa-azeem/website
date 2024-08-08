@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import Window from "../components/Window"
+import Badge from "../components/Badge";
 import {Download} from "@mui/icons-material";
 
 import downloadEarth from "../assets/downloadEarth.png";
@@ -10,11 +11,10 @@ import {ResumeCard} from "../@/components/magicui/resume-card";
 import ivyAndBrambleLogo from "../assets/ivyAndBrambleLogo.jpeg";
 import {motion} from "framer-motion";
 
-const EDUCATION_TAB  = "education-tab";
-const EXPERIENCE_TAB = "experience-tab";
-const SKILLS_TAB = "skills-tab";
 export default function CVSection() {
 
+    const EDUCATION_TAB  = "education-tab";
+    const EXPERIENCE_TAB = "experience-tab";
     const [activeTab, setActiveTab] = useState(EXPERIENCE_TAB);
     const changeTab = (event) => setActiveTab(event.target.id);
     const Tab = ({id, tabText, className}) => {
@@ -45,16 +45,6 @@ export default function CVSection() {
             </motion.div>
         )
     }
-    const Badge = ({children}) => {
-        return (
-            <span
-                className="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10">
-                {children}
-            </span>
-        )
-    }
-
-    const placeholderText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mollis sodales ultrices. Fusce feugiat blandit metus sed auctor. Pellentesque pharetra ex quis ex pulvinar consectetur. Vivamus tempor ante eget quam porta consectetur. In consectetur ultrices nibh tincidunt finibus. Nam egestas accumsan ligula, ";
 
     return (
         <div className={"space-y-6 lg:space-y-0 lg:grid grid-rows-1 grid-cols-3 mx-auto lg:container lg:gap-6 lg:h-full lg:px-4"}>
@@ -100,48 +90,9 @@ export default function CVSection() {
                     </div>
                     <div className={"h-full w-full bg-white rounded-lg p-4 border-2 border-gray-400 overflow-y-scroll"}>
 
-                        <TabContent tabId={EDUCATION_TAB}>
-                            <ResumeCard
-                                title={"King's College London"}
-                                subtitle={"BSc Computer Science with Management and a Year in Industry - 1st Class Honours"}
-                                description={
-                                    <div>
-                                        <div className={"space-x-1 space-y-1 mb-1"}>
-                                            <Badge>Python</Badge>
-                                            <Badge>Java</Badge>
-                                            <Badge>C++</Badge>
-                                            <Badge>Scala</Badge>
-                                            <Badge>Django</Badge>
-                                            <Badge>Frontend Web Development</Badge>
-                                        </div>
-                                        <span>{placeholderText}</span>
-                                    </div>
-                                }
-                                altText={""}
-                                period={"2022-2026"}
-                                logoUrl={"https://pbs.twimg.com/profile_images/1277994430797144064/RybtX1Wp_400x400.jpg"}
-                            />
-                            <ResumeCard
-                                title={"Manchester High School for Girls Sixth Form"}
-                                subtitle={"A Level Mathematics, Further Mathematics, Computer Science, Physics - A*A*A*A*"}
-                                description={placeholderText}
-                                altText={""}
-                                period={"2020-2022"}
-                                logoUrl={"https://yt3.googleusercontent.com/hGn2aIDoysSxp8epxhTpnYX34HlRjnU8Y_jipmQdaCVfexwI3Su5xwGmHvLFEbXIU0Folwd-Ag=s900-c-k-c0x00ffffff-no-rj"}
-                            />
-                            <ResumeCard
-                                title={"Manchester High School for Girls"}
-                                subtitle={"GCSEs - All 9s"}
-                                description={placeholderText}
-                                altText={""}
-                                period={"2015-2020"}
-                                logoUrl={"https://yt3.googleusercontent.com/hGn2aIDoysSxp8epxhTpnYX34HlRjnU8Y_jipmQdaCVfexwI3Su5xwGmHvLFEbXIU0Folwd-Ag=s900-c-k-c0x00ffffff-no-rj"}
-                            />
-                        </TabContent>
-
                         <TabContent tabId={EXPERIENCE_TAB}>
                             <ResumeCard
-                                title={"Hewlett Packard Enterprise"}
+                                title={"Hewlett Packard Enterprise "}
                                 subtitle={"Software Engineer - Year in Industry"}
                                 description={
                                     <div>
@@ -151,7 +102,9 @@ export default function CVSection() {
                                             <Badge>Python</Badge>
                                             <Badge>Cloud Storage</Badge>
                                         </div>
-                                        <span>{placeholderText}</span>
+                                        <ul className={"list-disc list-inside"}>
+                                            <li>Datapath team (local & cloud storage engineering)</li>
+                                        </ul>
                                     </div>
                                 }
                                 altText={""}
@@ -166,10 +119,16 @@ export default function CVSection() {
                                         <div className={"space-x-1 space-y-1 mb-1"}>
                                             <Badge>Python</Badge>
                                             <Badge>TensorFlow</Badge>
+                                            <Badge>Bash</Badge>
                                             <Badge>Machine Learning</Badge>
                                             <Badge>Generative AI</Badge>
                                         </div>
-                                        <span>{placeholderText}</span>
+                                        <ul className={"list-disc list-inside"}>
+                                            <li>Co-authored paper: <a href="https://arxiv.org/abs/2406.08824" className="text-blue-600 z-50" target="_blank">LLM-Driven Robots Risk Enacting Discrimination, Violence, and Unlawful Actions</a></li>
+                                            <li>Utilised interdisciplinary knowledge of ethical challenges in AI to engineer a robust set of prompts probing LLMs for bias in robotic decision-making settings.</li>
+                                            <li>Programmed Python and Bash scripts to test LLMs with the aforementioned prompt set, paying special attention to maximizing efficiency and producing results conducive to aggregation and quantitative analysis.</li>
+                                            <li>Promoted from temporary Undergraduate Research Fellow to Research Assistant for commitment and excellent quality of work produced.</li>
+                                        </ul>
                                     </div>
                                 }
                                 altText={""}
@@ -179,9 +138,16 @@ export default function CVSection() {
                             <ResumeCard
                                 title={"King's Labs"}
                                 subtitle={"Principal"}
-                                description={placeholderText}
+                                description={
+                                    <ul className={"list-disc list-inside"}>
+                                        <li>Leading a pro-bono student software engineering team to produce industry-standard software for various professional clients. Member of the Executive Committee at King’s Business Club, the UK’s largest business society.</li>
+                                        <li>Spearheading agile full-stack software development, seeing projects through from initial vision to sprints to deployment.</li>
+                                        <li>Oversaw all business operations, including software engineering, marketing, corporate relations, and business strategy.</li>
+                                        <li>Demonstrated excellent interpersonal skills by fostering an inclusive, productive culture in a team of 9 software engineers, as well as developing valuable client relations through networking.</li>
+                                    </ul>
+                                }
                                 altText={""}
-                                period={"Aug 2023 - Jun 2024"}
+                                period={"Aug 2023 - May 2024"}
                                 logoUrl={"https://media.licdn.com/dms/image/C560BAQHL0IvzH-dxYA/company-logo_200_200/0/1658232092933/king_s_labs_logo?e=2147483647&v=beta&t=K05_RDipqUKHpicosi5hfQvF5ACMmBERJxw6IAJ3sLo"}
                             />
                             <ResumeCard
@@ -193,7 +159,11 @@ export default function CVSection() {
                                             <Badge>Python</Badge>
                                             <Badge>Java</Badge>
                                         </div>
-                                        <span>{placeholderText}</span>
+                                        <ul className={"list-disc list-inside"}>
+                                            <li>Offering tailored one-to-one sessions for comprehensive exam preparation and programming practice</li>
+                                            <li>Working with students to fit their syllabus, individual learning style, and educational goals into a detailed study plan to work through together</li>
+                                            <li>Providing detailed feedback and holistic guidance that is not only subject-related, but helps students to build better study habits as a whole, propelling academic achievement and satisfaction.</li>
+                                        </ul>
                                     </div>
                                 }
                                 altText={""}
@@ -202,11 +172,55 @@ export default function CVSection() {
                             />
                             <ResumeCard
                                 title={"Ivy & Bramble"}
-                                subtitle={"Co-Managing Director"}
-                                description={placeholderText}
+                                subtitle={"Co-Managing Director & Technology Director"}
+                                description={
+                                    <ul className={"list-disc list-inside"}>
+                                        <li>Awarded Christine Lee Jones Prize for Leadership & Initiative for performance as Managing Director</li>
+                                        <li>4 company awards, including Company of the Year in Greater Manchester</li>
+                                    </ul>
+                                }
                                 altText={""}
                                 period={"Sep 2020 - Jul 2021"}
                                 logoUrl={ivyAndBrambleLogo}
+                            />
+                        </TabContent>
+
+                        <TabContent tabId={EDUCATION_TAB}>
+                            <ResumeCard
+                                title={"King's College London"}
+                                subtitle={"BSc Computer Science with Management and a Year in Industry - 1st Class Honours"}
+                                description={
+                                    <div>
+                                        <div className={"space-x-1 space-y-1 mb-1"}>
+                                            <Badge>Python</Badge>
+                                            <Badge>Java</Badge>
+                                            <Badge>C++</Badge>
+                                            <Badge>Scala</Badge>
+                                            <Badge>SQL</Badge>
+                                            <Badge>Django</Badge>
+                                            <Badge>Frontend Web Development</Badge>
+                                        </div>
+                                        <p>> 2x awarded Department of Informatics Computer Science with Management Prize for best results in cohort (22-23 & 23-24)</p>
+                                        <p>> Undergraduate Research Fellow</p>
+                                    </div>
+                                }
+                                altText={""}
+                                period={"2022-2026"}
+                                logoUrl={"https://pbs.twimg.com/profile_images/1277994430797144064/RybtX1Wp_400x400.jpg"}
+                            />
+                            <ResumeCard
+                                title={"Manchester High School for Girls"}
+                                subtitle={"A Level - A*A*A*A* / GCSEs - All 9s"}
+                                description={
+                                    <ul className={"list-disc list-inside"}>
+                                        <li>A Level subjects: Mathematics, Further Mathematics, Computer Science, Physics</li>
+                                        <li>Awards: School Computer Science Award (2022, 2020), Christine Lee Jones Prize for Leadership & Initiative (2022), Merlyn Lowther Scholarship Award (2020), Academic Scholarship (2015-2022)</li>
+                                        <li>CEM IBE baseline aptitude assessment score: 99th percentile nationally (2020)</li>
+                                    </ul>
+                                }
+                                altText={""}
+                                period={"2015-2022"}
+                                logoUrl={"https://yt3.googleusercontent.com/hGn2aIDoysSxp8epxhTpnYX34HlRjnU8Y_jipmQdaCVfexwI3Su5xwGmHvLFEbXIU0Folwd-Ag=s900-c-k-c0x00ffffff-no-rj"}
                             />
                         </TabContent>
 
