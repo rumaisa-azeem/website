@@ -16,7 +16,7 @@ export const ResumeCard = ({
                                period,
                                description,
                            }) => {
-    const [isExpanded, setIsExpanded] = React.useState(false);
+    const [isExpanded, setIsExpanded] = React.useState(true);
 
     const handleClick = (e) => {
         if (description) {

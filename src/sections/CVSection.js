@@ -200,8 +200,10 @@ export default function CVSection() {
                                             <Badge>Django</Badge>
                                             <Badge>Frontend Web Development</Badge>
                                         </div>
-                                        <p>> 2x awarded Department of Informatics Computer Science with Management Prize for best results in cohort (22-23 & 23-24)</p>
-                                        <p>> Undergraduate Research Fellow</p>
+                                        <ul className={"list-disc list-inside"}>
+                                            <li>2x awarded Department of Informatics Computer Science with Management Prize for best results in cohort (22-23 & 23-24)</li>
+                                            <li>Undergraduate Research Fellow</li>
+                                        </ul>
                                     </div>
                                 }
                                 altText={""}
