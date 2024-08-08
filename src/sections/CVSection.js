@@ -45,6 +45,14 @@ export default function CVSection() {
             </motion.div>
         )
     }
+    const Badge = ({children}) => {
+        return (
+            <span
+                className="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10">
+                {children}
+            </span>
+        )
+    }
 
     const placeholderText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mollis sodales ultrices. Fusce feugiat blandit metus sed auctor. Pellentesque pharetra ex quis ex pulvinar consectetur. Vivamus tempor ante eget quam porta consectetur. In consectetur ultrices nibh tincidunt finibus. Nam egestas accumsan ligula, ";
 
@@ -96,7 +104,19 @@ export default function CVSection() {
                             <ResumeCard
                                 title={"King's College London"}
                                 subtitle={"BSc Computer Science with Management and a Year in Industry - 1st Class Honours"}
-                                description={placeholderText}
+                                description={
+                                    <div>
+                                        <div className={"space-x-1 space-y-1 mb-1"}>
+                                            <Badge>Python</Badge>
+                                            <Badge>Java</Badge>
+                                            <Badge>C++</Badge>
+                                            <Badge>Scala</Badge>
+                                            <Badge>Django</Badge>
+                                            <Badge>Frontend Web Development</Badge>
+                                        </div>
+                                        <span>{placeholderText}</span>
+                                    </div>
+                                }
                                 altText={""}
                                 period={"2022-2026"}
                                 logoUrl={"https://pbs.twimg.com/profile_images/1277994430797144064/RybtX1Wp_400x400.jpg"}
@@ -123,7 +143,17 @@ export default function CVSection() {
                             <ResumeCard
                                 title={"Hewlett Packard Enterprise"}
                                 subtitle={"Software Engineer - Year in Industry"}
-                                description={placeholderText}
+                                description={
+                                    <div>
+                                        <div className={"space-x-1 space-y-1 mb-1"}>
+                                            <Badge>C++</Badge>
+                                            <Badge>C</Badge>
+                                            <Badge>Python</Badge>
+                                            <Badge>Cloud Storage</Badge>
+                                        </div>
+                                        <span>{placeholderText}</span>
+                                    </div>
+                                }
                                 altText={""}
                                 period={"Jul 2024 - present"}
                                 logoUrl={"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMwAAADACAMAAAB/Pny7AAAAOVBMVEX///8Ys4j3+/qi2cU8t44Ar4Cq4M/Z8Ok3vJcAsINuxaZvy67s+PSCyKs1tIpMwJ5jx6nK6+G44dKnzkBKAAAAxElEQVR4nO3Ruw7CMBBFQUIw4PBI4P8/lgrkgsrYZAUz/Up7dDcbAAAAAAAAAAAAAAAAAAD4E9ugqmIu111A10tVzJSGgNJUF5PXfvydLEZMf2J+NiYF0Cgmz+N+deOc28SczlX3TZ1PYl7E9CKmIKYXMQUxvYgpiOlFTEFML2IKYnoRUxDTS6uYFCMmtVlmuR1Wd1vaLDMMxwCev3wckwNoFhOJGDFfIEbMF1TG3MeQ7lUxAAAAAAAAAAAAAAAAAAD8iwez5S15GO9xFAAAAABJRU5ErkJggg=="}
@@ -131,7 +161,17 @@ export default function CVSection() {
                             <ResumeCard
                                 title={"Responsible Robotics & AI Lab, King's College London"}
                                 subtitle={"Research Assistant"}
-                                description={placeholderText}
+                                description={
+                                    <div>
+                                        <div className={"space-x-1 space-y-1 mb-1"}>
+                                            <Badge>Python</Badge>
+                                            <Badge>TensorFlow</Badge>
+                                            <Badge>Machine Learning</Badge>
+                                            <Badge>Generative AI</Badge>
+                                        </div>
+                                        <span>{placeholderText}</span>
+                                    </div>
+                                }
                                 altText={""}
                                 period={"Jul 2023 - present"}
                                 logoUrl={"https://pbs.twimg.com/profile_images/1277994430797144064/RybtX1Wp_400x400.jpg"}
@@ -147,7 +187,15 @@ export default function CVSection() {
                             <ResumeCard
                                 title={"Educate Private"}
                                 subtitle={"Computer Science Tutor - GCSE/A Level/AP"}
-                                description={placeholderText}
+                                description={
+                                    <div>
+                                        <div className={"space-x-1 space-y-1 mb-1"}>
+                                            <Badge>Python</Badge>
+                                            <Badge>Java</Badge>
+                                        </div>
+                                        <span>{placeholderText}</span>
+                                    </div>
+                                }
                                 altText={""}
                                 period={"Apr 2023 - present"}
                                 logoUrl={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5ij7pNpDVTH1pQFnXmdoZzUYgIpNaRxL0mA&s"}
