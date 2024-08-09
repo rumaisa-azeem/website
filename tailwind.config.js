@@ -20,7 +20,7 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        display: ['Bowlby One']
+        display: ['DM Sans']
       },
       colors: {
         border: "hsl(var(--border))",
