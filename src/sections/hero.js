@@ -1,4 +1,3 @@
-import React from "react";
 import profilePic from '../assets/profilePic.png';
 
 import {LinkedIn, GitHub} from "@mui/icons-material";
@@ -6,7 +5,7 @@ import Typewriter from "typewriter-effect";
 
 export default function Hero() {
     return(
-        <div id="hero-section" className="h-screen flex flex-col justify-center md:pt-10 snap-start">
+        <div id="hero-section" className="h-screen flex flex-col justify-center snap-start">
             <div className="p-10 container mx-auto xs:pt-24 flex flex-col-reverse lg:flex-row">
                 <div id="hero_text" className="flex basis-1/2 xl:basis-7/12 flex-col justify-center text-center lg:text-left space-y-3">
                     <h1 className="text-3xl xs:text-6xl lg:text-7xl font-extrabold font-display">hi, i'm rumaisa.</h1>
