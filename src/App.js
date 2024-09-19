@@ -6,6 +6,7 @@ import Hero from "./sections/hero";
 import AboutSection from "./sections/AboutSection";
 import Navbar from "./components/navbar";
 import CVSection from "./sections/CVSection";
+import ProjectsSection from "./sections/ProjectsSection";
 
 function App() {
 
@@ -21,12 +22,12 @@ function App() {
                     <AboutSection/>
                 </section>
 
-                <section className="md:h-screen pt-6 md:pt-24 snap-center snap-mandatory" id="cv-experience-section">
+                <section className="lg:h-screen pt-6 md:pt-24 snap-center snap-mandatory" id="cv-experience-section">
                     <CVSection />
                 </section>
 
-                <section className="h-screen p-6 flex flex-col justify-center snap-center snap-mandatory" id="projects-section">
-                    <h1 className="text-4xl font-extrabold">Projects</h1>
+                <section className="min-h-screen py-6 flex flex-col justify-center snap-start snap-mandatory" id="projects-section">
+                    <ProjectsSection />
                 </section>
 
             </main>
