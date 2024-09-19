@@ -12,7 +12,7 @@ export default function AboutSection() {
         <Window className={"w-full md:container mx-auto"}>
             <div className={"flex flex-col md:grid md:grid-rows-1 md:grid-cols-4 "}>
                 <h1 className="font-extrabold text-5xl col-span-1">About</h1>
-                <div className="col-span-3 flex flex-col gap-3">
+                <div className="col-span-3 flex flex-col gap-3 text-base">
 
                     <div className={"flex flex-col gap-4 md:flex-row"}>
                         <div className={"md:grow lg:basis-1/3"}>
@@ -20,8 +20,8 @@ export default function AboutSection() {
                             Currently, I'm on my industrial placement year at Hewlett Packard Enterprise (Bristol), where I'm working as a Software Engineer Intern.
                         </div>
                         <div className={"flex gap-3 h-14 justify-center md:flex-col lg:flex-row lg:items-center md:justify-start md:h-full"}>
-                            <img src={kclLogo} className={"max-h-60 lg:h-24 object-contain"} alt={"KCL logo"}/>
-                            <img src={hpeLogo} className={"max-h-60 lg:h-24 object-contain"} alt={"HPE logo"}/>
+                            <img src={kclLogo} className={"max-h-60 lg:h-20 object-contain"} alt={"KCL logo"}/>
+                            <img src={hpeLogo} className={"max-h-60 lg:h-20 object-contain"} alt={"HPE logo"}/>
                         </div>
                     </div>
                     <p>
