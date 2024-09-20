@@ -22,11 +22,11 @@ function App() {
                     <AboutSection/>
                 </section>
 
-                <section className="lg:h-screen pt-6 md:pt-24 snap-center snap-mandatory" id="cv-experience-section">
+                <section className="lg:h-screen pt-6 pb-24 md:pb-0 md:pt-24 snap-center snap-mandatory" id="cv-experience-section">
                     <CVSection />
                 </section>
 
-                <section className="min-h-screen py-6 flex flex-col justify-center snap-start snap-mandatory" id="projects-section">
+                <section className="min-h-screen p-6 flex flex-col justify-center snap-start snap-mandatory" id="projects-section">
                     <ProjectsSection />
                 </section>
 

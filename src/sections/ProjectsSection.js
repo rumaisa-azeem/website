@@ -44,9 +44,9 @@ export default function ProjectsSection() {
         // },
     ];
     return (
-        <div className={"w-full lg:container mx-auto py-16"}>
+        <div className={"w-full lg:container mx-auto md:pt-16 pb-16"}>
             <h1 className="text-4xl font-extrabold mb-6">Projects</h1>
-            <div className={"md:grid grid-cols-3 gap-4"}>
+            <div className={"space-y-4 md:space-y-0 md:grid grid-cols-2 lg:grid-cols-3 gap-4"}>
                 {projects.map((project, index) =>
                     <Window className={"h-[450px]"}>
                         <a href={project.link} target={"_blank"}>
@@ -70,7 +70,7 @@ export default function ProjectsSection() {
                                 </a>
                             }
                         </div>
-                        <div className={"flex gap-1 my-2"}>
+                        <div className={"flex flex-wrap gap-1 my-2"}>
                             {project.skills.map((skill) =>
                                 <Badge>{skill}</Badge>
                             )}
