@@ -6,6 +6,7 @@ import kclLogo from "../assets/kclLogo.png";
 import hpeLogo from "../assets/hpeLogo.jpeg";
 
 import {OpenInNew} from "@mui/icons-material";
+import NewTabLink from "../components/NewTabLink";
 
 export default function AboutSection() {
     return (
@@ -30,10 +31,8 @@ export default function AboutSection() {
                     </p>
                     <p>
                         Being a highly inquisitive person has also led me down the path of research, and I'm incredibly proud to have co-authored this paper
-                        in my second year at university:
-                        <br/>
-                        <a href="https://arxiv.org/abs/2406.08824" className="text-blue-600" target="_blank">
-                            <OpenInNew fontSize="inherit" />&nbsp;LLM-Driven Robots Risk Enacting Discrimination, Violence, and Unlawful Actions </a>
+                        in my second year at university:&nbsp;
+                        <NewTabLink href={"https://arxiv.org/abs/2406.08824"} text={"LLM-Driven Robots Risk Enacting Discrimination, Violence, and Unlawful Actions"} />
                     </p>
                     <p>
                         Additionally, as a management student, I'm passionate about utilising software to optimise business operations, which

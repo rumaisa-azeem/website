@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import Window from "../components/Window"
 import Badge from "../components/Badge";
-import {Download} from "@mui/icons-material";
+import {Download, OpenInNew} from "@mui/icons-material";
 
 import downloadEarth from "../assets/downloadEarth.png";
 import downloadFolder from "../assets/downloadFolder.png";
@@ -10,6 +10,7 @@ import downloadFile from "../assets/downloadFile.png";
 import {ResumeCard} from "../@/components/magicui/resume-card";
 import ivyAndBrambleLogo from "../assets/ivyAndBrambleLogo.jpeg";
 import {motion} from "framer-motion";
+import NewTabLink from "../components/NewTabLink";
 
 export default function CVSection() {
 
@@ -124,7 +125,10 @@ export default function CVSection() {
                                             <Badge>Generative AI</Badge>
                                         </div>
                                         <ul className={"list-disc list-inside"}>
-                                            <li>Co-authored paper: <a href="https://arxiv.org/abs/2406.08824" className="text-blue-600 z-50" target="_blank">LLM-Driven Robots Risk Enacting Discrimination, Violence, and Unlawful Actions</a></li>
+                                            <li>
+                                                Co-authored paper:&nbsp;
+                                                <NewTabLink href={"https://arxiv.org/abs/2406.08824"} text={"LLM-Driven Robots Risk Enacting Discrimination, Violence, and Unlawful Actions"} />
+                                            </li>
                                             <li>Utilised interdisciplinary knowledge of ethical challenges in AI to engineer a robust set of prompts probing LLMs for bias in robotic decision-making settings.</li>
                                             <li>Programmed Python and Bash scripts to test LLMs with the aforementioned prompt set, paying special attention to maximizing efficiency and producing results conducive to aggregation and quantitative analysis.</li>
                                             <li>Promoted from temporary Undergraduate Research Fellow to Research Assistant for commitment and excellent quality of work produced.</li>
@@ -132,7 +136,7 @@ export default function CVSection() {
                                     </div>
                                 }
                                 altText={""}
-                                period={"Jul 2023 - present"}
+                                period={"June 2023 - June 2024"}
                                 logoUrl={"https://pbs.twimg.com/profile_images/1277994430797144064/RybtX1Wp_400x400.jpg"}
                             />
                             <ResumeCard
@@ -167,7 +171,7 @@ export default function CVSection() {
                                     </div>
                                 }
                                 altText={""}
-                                period={"Apr 2023 - present"}
+                                period={"Apr 2023 - May 2024"}
                                 logoUrl={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5ij7pNpDVTH1pQFnXmdoZzUYgIpNaRxL0mA&s"}
                             />
                             <ResumeCard
