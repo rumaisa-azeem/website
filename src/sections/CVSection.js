@@ -71,9 +71,9 @@ export default function CVSection() {
                         <img src={downloadFile} className={"h-6 xl:h-8 pl-4 xl:pl-6"} />
                         <img src={downloadFolder} className={"h-10 xl:h-12"} />
                     </div>
-                    <a href={cvDownloadLink} className={"text-blue-600"} target={"_blank"}>
+                    <a href={cvDownloadLink} className={"text-blue-600 group"} target={"_blank"}>
                         <Download className={"me-1"}/>
-                        Download CV
+                        <span className={"relative after:bg-blue-600 after:absolute after:h-[1.5px] after:w-0 after:bottom-0 after:left-0 group-hover:after:w-full after:transition-all after:duration-300"}>Download CV</span>
                     </a>
                 </Window>
 
