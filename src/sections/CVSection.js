@@ -12,6 +12,8 @@ import ivyAndBrambleLogo from "../assets/ivyAndBrambleLogo.jpeg";
 import {motion} from "framer-motion";
 import NewTabLink from "../components/NewTabLink";
 
+const cvDownloadLink = "https://drive.google.com/file/d/1EEKn87bRROvsuCZt47dyZpbNIen82dYl/view?usp=sharing";
+
 export default function CVSection() {
 
     const EDUCATION_TAB  = "education-tab";
@@ -56,7 +58,7 @@ export default function CVSection() {
                     <Window className={"w-72 h-48 xs:h-40 md:h-32 absolute"} bgColor={"bg-green-100"} />
                     <Window className={"w-72 translate-y-5 translate-x-2"} bgColor={"bg-cyan-100"}>
                         <h1 className="text-4xl font-extrabold">CV & Experience</h1>
-                        <a href={"#"} className={"lg:hidden text-blue-600 float-right"}>
+                        <a href={cvDownloadLink} target={"_blank"} className={"lg:hidden text-blue-600 float-right"}>
                             <Download className={"me-1"}/>
                             Download CV
                         </a>
@@ -69,7 +71,7 @@ export default function CVSection() {
                         <img src={downloadFile} className={"h-6 xl:h-8 pl-4 xl:pl-6"} />
                         <img src={downloadFolder} className={"h-10 xl:h-12"} />
                     </div>
-                    <a href={"#"} className={"text-blue-600"}>
+                    <a href={cvDownloadLink} className={"text-blue-600"} target={"_blank"}>
                         <Download className={"me-1"}/>
                         Download CV
                     </a>
