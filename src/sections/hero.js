@@ -29,10 +29,10 @@ export default function Hero() {
                         />
                     </span>
                     <div id="hero_buttons" className="flex space-x-2 justify-center items-center lg:justify-start">
-                        <a href="https://github.com/rumaisa-azeem" className="text-[40px] hover:translate-y-1 transition ease-in-out">
+                        <a href="https://github.com/rumaisa-azeem" target={"_blank"} className="text-[40px] hover:translate-y-1 transition ease-in-out">
                             <GitHub fontSize="inherit"/>
                         </a>
-                        <a href="https://linkedin.com/in/rumaisa-azeem" className="text-[45px] hover:translate-y-1 transition ease-in-out">
+                        <a href="https://linkedin.com/in/rumaisa-azeem" target={"_blank"} className="text-[45px] hover:translate-y-1 transition ease-in-out">
                             <LinkedIn fontSize="inherit"/>
                         </a>
                     </div>
