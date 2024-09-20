@@ -8,6 +8,13 @@ import {Navbar as FlowbiteNavbar, NavbarBrand, NavbarCollapse, NavbarLink, Navba
 
 export default function Navbar({props}) {
 
+    const navList = [
+        { name: 'About', link: 'about-me-section' },
+        { name: 'CV & Experience', link: 'cv-experience-section'},
+        { name: 'Projects', link: 'projects-section' },
+    ];
+    const contactLink = "mailto:rumaisa.azeem0@gmail.com";
+
     if (window.innerWidth > 768) {
         document.documentElement.style.scrollSnapType = "y mandatory";
     }
@@ -28,13 +35,6 @@ export default function Navbar({props}) {
             }
         }
     }, []);
-
-    const navList = [
-        { name: 'About', link: 'about-me-section' },
-        { name: 'CV & Experience', link: 'cv-experience-section'},
-        { name: 'Projects', link: 'projects-section' },
-        { name: 'Contact', link: '/contact'},
-    ];
 
     const navbarTheme = {
         "root": {
@@ -77,6 +77,7 @@ export default function Navbar({props}) {
                         <NavbarLink>{nav.name}</NavbarLink>
                     </ScrollLink>
                 )}
+                    <NavbarLink href={contactLink}>Contact</NavbarLink>
             </NavbarCollapse>
         </FlowbiteNavbar>
     );
