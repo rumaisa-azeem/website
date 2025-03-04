@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import Window from "../components/Window"
 import Badge from "../components/Badge";
-import {Download, OpenInNew} from "@mui/icons-material";
+import {Download, ArrowForward} from "@mui/icons-material";
 
 import downloadEarth from "../assets/downloadEarth.png";
 import downloadFolder from "../assets/downloadFolder.png";
@@ -193,6 +193,12 @@ export default function CVSection() {
                                 period={"Sep 2020 - Jul 2021"}
                                 logoUrl={ivyAndBrambleLogo}
                             />
+                            <div className={"pt-2"}>
+                                <a onClick={() => setActiveTab(EDUCATION_TAB)} className={"text-blue-600 cursor-pointer flex items-center w-fit gap-1 mx-auto"}>
+                                    <span>See Education</span>
+                                    <ArrowForward fontSize="inherit" />
+                                </a>
+                            </div>
                         </TabContent>
 
                         <TabContent tabId={EDUCATION_TAB}>
