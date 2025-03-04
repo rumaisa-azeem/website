@@ -9,6 +9,7 @@ import downloadFile from "../assets/downloadFile.png";
 
 import {ResumeCard} from "../@/components/magicui/resume-card";
 import ivyAndBrambleLogo from "../assets/ivyAndBrambleLogo.jpeg";
+import mhsgLogo from "../assets/mhsg-logo.png";
 import {motion} from "framer-motion";
 import NewTabLink from "../components/NewTabLink";
 
@@ -228,7 +229,7 @@ export default function CVSection() {
                                 }
                                 altText={""}
                                 period={"2015-2022"}
-                                logoUrl={"https://yt3.googleusercontent.com/hGn2aIDoysSxp8epxhTpnYX34HlRjnU8Y_jipmQdaCVfexwI3Su5xwGmHvLFEbXIU0Folwd-Ag=s900-c-k-c0x00ffffff-no-rj"}
+                                logoUrl={mhsgLogo}
                             />
                         </TabContent>
 
