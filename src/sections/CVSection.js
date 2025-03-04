@@ -104,10 +104,13 @@ export default function CVSection() {
                                             <Badge>C++</Badge>
                                             <Badge>C</Badge>
                                             <Badge>Python</Badge>
+                                            <Badge>TypeScript</Badge>
+                                            <Badge>React & Redux</Badge>
+                                            <Badge>Flask</Badge>
                                             <Badge>Cloud Storage</Badge>
                                         </div>
                                         <ul className={"list-disc list-inside"}>
-                                            <li>Datapath team (local & cloud storage engineering)</li>
+                                            <li>Datapath team (deduplication & cloud storage engineering)</li>
                                         </ul>
                                     </div>
                                 }
