@@ -5,6 +5,7 @@ import Badge from "../components/Badge";
 
 import {OpenInNew} from "@mui/icons-material";
 
+import llmPaper from "../assets/llm-paper.jpg";
 import photographyPortfolio from "../assets/photography-portfolio.png";
 import portfolio from "../assets/portfolio.png";
 import studentRecords from "../assets/student-records.png";
@@ -13,6 +14,13 @@ import philsocTalk from "../assets/philsoc-talk.jpg";
 
 export default function ProjectsSection() {
     const projects = [
+        {
+            title: "Code & evaluation framework to assess discrimination risks of LLMs",
+            link: "https://github.com/rumaisa-azeem/llm-robots-discrimination-safety",
+            skills: ["Python", "PyTorch", "HRI", "Prompt Engineering"],
+            description: "Code for the paper mentioned above - runs set of prompts through LLMs, collects and analyses outputs",
+            screenshot: llmPaper
+        },
         {
             title: "Student Records Management System",
             skills: ["Python", "Django", "Bootstrap", "JavaScript", "Jest"],
@@ -41,17 +49,17 @@ export default function ProjectsSection() {
             screenshot: sudokuSolver
         },
         {
-            title: "KindleToZotero",
-            link: "https://github.com/rumaisa-azeem/kindleToZotero",
-            skills: ["Python"],
-            description: "A script to transfer Kindle notes to Zotero, helpful for academic reading. Unfinished but I stand by the idea.",
-        },
-        {
             title: "PhilSoc Talk - AI & Neuroscience",
             link: "https://photos.google.com/share/AF1QipPNZUi87tJWdqAlL244WBWqKdaQCq_v30T7XUZgrHw-aM6X686B62AAI6U2FjycyQ?key=Z1VBMWJuTHE2OF85MGpINmhWQ2R6VDR6ZnpHTDlR",
             skills: [],
             description: "Presented my findings about the parallels between AI & neuroscience for an hour to 100ish students",
             screenshot: philsocTalk
+        },
+        {
+            title: "KindleToZotero",
+            link: "https://github.com/rumaisa-azeem/kindleToZotero",
+            skills: ["Python"],
+            description: "A script to transfer Kindle notes to Zotero, helpful for academic reading. Unfinished but I stand by the idea.",
         }
     ];
     return (
@@ -62,7 +70,7 @@ export default function ProjectsSection() {
             </div>
             <div className={"space-y-4 md:space-y-0 md:grid grid-cols-2 lg:grid-cols-3 gap-4"}>
                 {projects.map((project, index) =>
-                    <Window className={"h-[450px]"}>
+                    <Window>
                         <a href={project.link} target={"_blank"}>
                             <div
                                 style={{
@@ -70,11 +78,11 @@ export default function ProjectsSection() {
                                     backgroundSize: "cover",
                                     backgroundPosition: "center",
                                 }}
-                                className={`h-3/5 w-full mb-2 border border-gray-300 transition ease-in-out rounded ${project.link && "hover:border-2 hover:border-blue-400"}`}
+                                className={`h-[230px] w-full mb-2 border border-gray-300 transition ease-in-out rounded ${project.link && "hover:border-2 hover:border-blue-400"}`}
                             >
                             </div>
                         </a>
-                        <div className={"flex justify-between"}>
+                        <div className={"flex justify-between gap-1"}>
                             <h2 className={"font-bold"}>
                                 {project.title} {project.title === "Project" ? index : ""}
                             </h2>
