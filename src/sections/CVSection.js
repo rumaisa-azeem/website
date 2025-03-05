@@ -105,7 +105,8 @@ export default function CVSection() {
                                             <Badge>C</Badge>
                                             <Badge>Python</Badge>
                                             <Badge>TypeScript</Badge>
-                                            <Badge>React & Redux</Badge>
+                                            <Badge>React</Badge>
+                                            <Badge>Redux</Badge>
                                             <Badge>Flask</Badge>
                                             <Badge>Cloud Storage</Badge>
                                         </div>
