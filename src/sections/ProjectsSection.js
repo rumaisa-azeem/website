@@ -70,7 +70,7 @@ export default function ProjectsSection() {
                                     backgroundSize: "cover",
                                     backgroundPosition: "center",
                                 }}
-                                className={`h-3/5 w-full mb-2 border border-gray-300 transition ease-in-out rounded hover:border-2 hover:border-blue-400`}
+                                className={`h-3/5 w-full mb-2 border border-gray-300 transition ease-in-out rounded ${project.link && "hover:border-2 hover:border-blue-400"}`}
                             >
                             </div>
                         </a>
