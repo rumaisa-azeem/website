@@ -102,8 +102,9 @@ export default function CVSection() {
                                     <div>
                                         <div className={"space-x-1 space-y-1 mb-1"}>
                                             <Badge>C++</Badge>
-                                            <Badge>C</Badge>
                                             <Badge>Python</Badge>
+                                            <Badge>Docker</Badge>
+                                            <Badge>Bash</Badge>
                                             <Badge>TypeScript</Badge>
                                             <Badge>React</Badge>
                                             <Badge>Redux</Badge>
@@ -126,10 +127,10 @@ export default function CVSection() {
                                     <div>
                                         <div className={"space-x-1 space-y-1 mb-1"}>
                                             <Badge>Python</Badge>
-                                            <Badge>TensorFlow</Badge>
+                                            <Badge>PyTorch</Badge>
                                             <Badge>Bash</Badge>
-                                            <Badge>Machine Learning</Badge>
                                             <Badge>Generative AI</Badge>
+                                            <Badge>HRI</Badge>
                                         </div>
                                         <ul className={"list-disc list-inside"}>
                                             <li>
