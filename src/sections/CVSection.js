@@ -8,12 +8,13 @@ import {motion, useAnimate} from "motion/react";
 import downloadEarth from "../assets/downloadEarth.png";
 import downloadFolder from "../assets/downloadFolder.png";
 import downloadFile from "../assets/downloadFile.png";
-
 import ivyAndBrambleLogo from "../assets/ivyAndBrambleLogo.jpeg";
 import mhsgLogo from "../assets/mhsg-logo.png";
+import cv from "../assets/cv.pdf"
+
 import NewTabLink from "../components/NewTabLink";
 
-const cvDownloadLink = "https://drive.google.com/file/d/1EEKn87bRROvsuCZt47dyZpbNIen82dYl/view?usp=sharing";
+const cvFilename = "Rumaisa Azeem CV.pdf";
 
 export default function CVSection() {
 
@@ -69,7 +70,7 @@ export default function CVSection() {
                     <Window className={"w-72 h-48 xs:h-40 md:h-32 absolute"} bgColor={"bg-green-100"} />
                     <Window className={"w-72 translate-y-5 translate-x-2"} bgColor={"bg-cyan-100"}>
                         <h1 className="text-4xl font-extrabold">CV & Experience</h1>
-                        <a href={cvDownloadLink} target={"_blank"} className={"lg:hidden text-blue-600 float-right"}>
+                        <a href={cv} download={cvFilename} className={"lg:hidden text-blue-600 float-right"}>
                             <Download className={"me-1"}/>
                             Download CV
                         </a>
@@ -84,7 +85,7 @@ export default function CVSection() {
                         <img src={downloadFolder} className={"h-10 xl:h-12"} />
                     </div>
                     <a
-                        href={cvDownloadLink} target={"_blank"}
+                        href={cv} download={cvFilename}
                         className={"text-blue-600 group"}
                         onMouseOver={animateDownload}
                     >
