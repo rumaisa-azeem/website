@@ -2,15 +2,15 @@ import React, {useState} from "react";
 import Window from "../components/Window"
 import Badge from "../components/Badge";
 import {Download, ArrowForward} from "@mui/icons-material";
+import {ResumeCard} from "../@/components/magicui/resume-card";
+import {motion, useAnimate} from "motion/react";
 
 import downloadEarth from "../assets/downloadEarth.png";
 import downloadFolder from "../assets/downloadFolder.png";
 import downloadFile from "../assets/downloadFile.png";
 
-import {ResumeCard} from "../@/components/magicui/resume-card";
 import ivyAndBrambleLogo from "../assets/ivyAndBrambleLogo.jpeg";
 import mhsgLogo from "../assets/mhsg-logo.png";
-import {motion} from "framer-motion";
 import NewTabLink from "../components/NewTabLink";
 
 const cvDownloadLink = "https://drive.google.com/file/d/1EEKn87bRROvsuCZt47dyZpbNIen82dYl/view?usp=sharing";
@@ -50,6 +50,16 @@ export default function CVSection() {
         )
     }
 
+    const [scope, animate] = useAnimate()
+    const animateDownload = () => {
+        const images = scope.current.children
+        animate([
+            [images[1], { rotate: [-180, 0], opacity: [0, 1], scale: [0, 1]}, {duration: 0.5}],
+            [images[1], { x: [-50, 70]}, {duration: 1}],
+            [images[1], { opacity: [1, 0], scale: [1, 0]}, {duration: 0.5}],
+        ])
+    }
+
     return (
         <div className={"space-y-6 lg:space-y-0 lg:grid grid-rows-1 grid-cols-3 mx-auto lg:container lg:gap-6 lg:h-full lg:px-4"}>
 
@@ -66,13 +76,18 @@ export default function CVSection() {
                     </Window>
                 </div>
 
+                {/* download cv window */}
                 <Window className={"hidden lg:flex w-3/5 mx-auto"}>
-                    <div className={"flex justify-between mb-2"}>
+                    <div className={"flex justify-between mb-2"} ref={scope}>
                         <img src={downloadEarth} className={"h-10 xl:h-12"} />
-                        <img src={downloadFile} className={"h-6 xl:h-8 pl-4 xl:pl-6"} />
+                        <img src={downloadFile} className={"h-6 xl:h-8 -translate-x-10 opacity-0"} />
                         <img src={downloadFolder} className={"h-10 xl:h-12"} />
                     </div>
-                    <a href={cvDownloadLink} className={"text-blue-600 group"} target={"_blank"}>
+                    <a
+                        href={cvDownloadLink} target={"_blank"}
+                        className={"text-blue-600 group"}
+                        onMouseOver={animateDownload}
+                    >
                         <Download className={"me-1"}/>
                         <span className={"relative after:bg-blue-600 after:absolute after:h-[1.5px] after:w-0 after:bottom-0 after:left-0 group-hover:after:w-full after:transition-all after:duration-300"}>Download CV</span>
                     </a>
@@ -80,6 +95,7 @@ export default function CVSection() {
 
             </div>
 
+            {/* experience/education tabs */}
             <div className={"px-4 lg:p-0 lg:col-span-2"}>
                 <div className={`rounded-lg border-2 border-gray-500 p-2 drop-shadow-lg flex flex-col gap-3 bg-pink-200 lg:mt-12 lg:h-4/5`}>
                     <div className={"flex gap-2 pt-1"}>
