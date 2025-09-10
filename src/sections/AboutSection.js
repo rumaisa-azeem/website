@@ -17,17 +17,17 @@ export default function AboutSection() {
 
                     <div className={"flex flex-col gap-4 md:flex-row"}>
                         <div className={"md:grow lg:basis-1/3"}>
-                            Based in Manchester, I'm studying for my BSc in Computer Science with Management at King's College London.
-                            Currently, I'm on my industrial placement year at Hewlett Packard Enterprise (Bristol), where I'm working as a Software Engineer Intern.
+                            Originally from Manchester, I'm currently in my final year of BSc in Computer Science with Management at King's College London.
+                            I recently completed a placement year as a software engineering intern at Hewlett Packard Enterprise (Bristol).
                         </div>
                         <div className={"flex gap-3 h-14 justify-center md:flex-col lg:flex-row lg:items-center md:justify-start md:h-full"}>
                             <img src={kclLogo} className={"max-h-60 lg:h-20 object-contain"} alt={"KCL logo"}/>
-                            <img src={hpeLogo} className={"max-h-60 lg:h-20 object-contain"} alt={"HPE logo"}/>
+                            <img src={'https://www.hpcwire.com/wp-content/uploads/2025/06/HPE-logo-2025-dark.png'} className={"max-h-60 lg:h-20 object-contain"} alt={"HPE logo"}/>
                         </div>
                     </div>
                     <p>
                         Before I started coding for a career, I did it as a hobby. I love problem-solving, especially
-                        when it comes to (unnecessarily) automating minor inconveniences in my daily life.
+                        when it comes to (unnecessarily) automating minor inconveniences in my daily life!
                     </p>
                     <p>
                         Being a highly inquisitive person has also led me down the path of research, and I'm incredibly proud to have co-authored this paper

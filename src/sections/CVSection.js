@@ -129,13 +129,27 @@ export default function CVSection() {
                                             <Badge>Cloud Storage</Badge>
                                         </div>
                                         <ul className={"list-disc list-inside"}>
-                                            <li>Datapath team (deduplication & cloud storage engineering)</li>
+                                            <li>Independently investigated backup application start time – developed a lightweight simulation of the
+                                                app's deduplication algorithm reducing testing time by 97%, presented findings to seniors to inform further development, and documented
+                                                actionable insights for external teams to resolve active customer support cases.</li>
+                                            <li>Developed features for and maintained an internal performance-testing web application,
+                                                 reducing hours of manual effort required by 30 other engineers and improving accuracy of pre-release testing.</li>
+                                            <li>Architected and implemented cloud storage command line support tools for AWS, GCP, and Azure, shipped on HPE’s
+                                                latest backup appliance.</li>
+                                            <li>Created a novel data profiling method with security and customer profiling applications, winning HPE’s Bristol Hack
+                                                Days and subsequently co-authoring intellectual property disclosures to be submitted as patents.</li>
+                                            <li>Led the team’s transition to a Docker-based development environment, delivering automated setup scripts and
+                                                onboarding documentation.</li>
+                                            <li>Maintained GitHub Actions CICD pipelines to automate building and testing workflows, removing hours of weekly
+                                                manual testing.</li>
+                                            <li>Awarded ✨‘Intern of the Quarter for Business Impact’✨and retained as a part-time intern  after the placement year for
+                                                standout technical contributions.</li>
                                         </ul>
                                     </div>
                                 }
                                 altText={""}
                                 period={"Jul 2024 - present"}
-                                logoUrl={"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMwAAADACAMAAAB/Pny7AAAAOVBMVEX///8Ys4j3+/qi2cU8t44Ar4Cq4M/Z8Ok3vJcAsINuxaZvy67s+PSCyKs1tIpMwJ5jx6nK6+G44dKnzkBKAAAAxElEQVR4nO3Ruw7CMBBFQUIw4PBI4P8/lgrkgsrYZAUz/Up7dDcbAAAAAAAAAAAAAAAAAAD4E9ugqmIu111A10tVzJSGgNJUF5PXfvydLEZMf2J+NiYF0Cgmz+N+deOc28SczlX3TZ1PYl7E9CKmIKYXMQUxvYgpiOlFTEFML2IKYnoRUxDTS6uYFCMmtVlmuR1Wd1vaLDMMxwCev3wckwNoFhOJGDFfIEbMF1TG3MeQ7lUxAAAAAAAAAAAAAAAAAAD8iwez5S15GO9xFAAAAABJRU5ErkJggg=="}
+                                logoUrl={"https://brandlogo.org/wp-content/uploads/2025/06/Hewlett-Packard-Enterprise-HPE-Logo-2025.png.webp"}
                             />
                             <ResumeCard
                                 title={"Responsible Robotics & AI Lab, King's College London"}
@@ -145,8 +159,9 @@ export default function CVSection() {
                                         <div className={"space-x-1 space-y-1 mb-1"}>
                                             <Badge>Python</Badge>
                                             <Badge>PyTorch</Badge>
+                                            <Badge>HuggingFace Transformers</Badge>
                                             <Badge>Bash</Badge>
-                                            <Badge>Generative AI</Badge>
+                                            <Badge>Large Language Models</Badge>
                                             <Badge>HRI</Badge>
                                         </div>
                                         <ul className={"list-disc list-inside"}>
@@ -156,12 +171,12 @@ export default function CVSection() {
                                             </li>
                                             <li>Utilised interdisciplinary knowledge of ethical challenges in AI to engineer a robust set of prompts probing LLMs for bias in robotic decision-making settings.</li>
                                             <li>Programmed Python and Bash scripts to test LLMs with the aforementioned prompt set, paying special attention to maximizing efficiency and producing results conducive to aggregation and quantitative analysis.</li>
-                                            <li>Promoted from temporary Undergraduate Research Fellow to Research Assistant for commitment and excellent quality of work produced.</li>
+                                            <li>Promoted from temporary Undergraduate Research Fellow to Research Assistant for commitment and excellent quality of work.</li>
                                         </ul>
                                     </div>
                                 }
                                 altText={""}
-                                period={"June 2023 - June 2024"}
+                                period={"Jun 2023 - Dec 2024"}
                                 logoUrl={"https://pbs.twimg.com/profile_images/1277994430797144064/RybtX1Wp_400x400.jpg"}
                             />
                             <ResumeCard
@@ -169,8 +184,8 @@ export default function CVSection() {
                                 subtitle={"Principal"}
                                 description={
                                     <ul className={"list-disc list-inside"}>
-                                        <li>Leading a pro-bono student software engineering team to produce industry-standard software for various professional clients. Member of the Executive Committee at King’s Business Club, the UK’s largest business society.</li>
-                                        <li>Spearheading agile full-stack software development, seeing projects through from initial vision to sprints to deployment.</li>
+                                        <li>Led a pro-bono student software engineering team to produce industry-standard software for various professional clients. Member of the Executive Committee at King’s Business Club, the UK’s largest business society.</li>
+                                        <li>Directed agile full-stack software development, managing projects from client consultations to deployment.</li>
                                         <li>Oversaw all business operations, including software engineering, marketing, corporate relations, and business strategy.</li>
                                         <li>Demonstrated excellent interpersonal skills by fostering an inclusive, productive culture in a team of 9 software engineers, as well as developing valuable client relations through networking.</li>
                                     </ul>
@@ -189,9 +204,8 @@ export default function CVSection() {
                                             <Badge>Java</Badge>
                                         </div>
                                         <ul className={"list-disc list-inside"}>
-                                            <li>Offering tailored one-to-one sessions for comprehensive exam preparation and programming practice</li>
-                                            <li>Working with students to fit their syllabus, individual learning style, and educational goals into a detailed study plan to work through together</li>
-                                            <li>Providing detailed feedback and holistic guidance that is not only subject-related, but helps students to build better study habits as a whole, propelling academic achievement and satisfaction.</li>
+                                            <li>Demonstrated thorough understanding of computer science theory by tutoring students for exams in GCSE/A-Level/AP computer science, including Python and Java programming.</li>
+                                            <li>Developed tailored, time-paced study plans, providing detailed feedback and guidance to help students not only pass their exams but build better study habits.</li>
                                         </ul>
                                     </div>
                                 }
@@ -204,8 +218,10 @@ export default function CVSection() {
                                 subtitle={"Co-Managing Director & Technology Director"}
                                 description={
                                     <ul className={"list-disc list-inside"}>
+                                        <li>Developed company website to advertise the business and mange orders, which led to widespread recognition for consistency of branding and ease of use for the customer.</li>
+                                        <li>Implemented digital management solutions to boost the team’s productivity and organisation, which directly translated to an increase in profit.</li>
                                         <li>Awarded Christine Lee Jones Prize for Leadership & Initiative for performance as Managing Director</li>
-                                        <li>4 company awards, including Company of the Year in Greater Manchester</li>
+                                        <li>Additionally earned 4 company awards, including Company of the Year in Greater Manchester</li>
                                     </ul>
                                 }
                                 altText={""}
@@ -233,7 +249,6 @@ export default function CVSection() {
                                             <Badge>Scala</Badge>
                                             <Badge>SQL</Badge>
                                             <Badge>Django</Badge>
-                                            <Badge>Frontend Web Development</Badge>
                                         </div>
                                         <ul className={"list-disc list-inside"}>
                                             <li>2x awarded Department of Informatics Computer Science with Management Prize for best results in cohort (22-23 & 23-24)</li>

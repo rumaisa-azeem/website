@@ -17,8 +17,8 @@ export default function ProjectsSection() {
         {
             title: "Code & evaluation framework to assess discrimination risks of LLMs",
             link: "https://github.com/rumaisa-azeem/llm-robots-discrimination-safety",
-            skills: ["Python", "PyTorch", "HRI", "Prompt Engineering"],
-            description: "Code for the paper mentioned above - runs set of prompts through LLMs, collects and analyses outputs",
+            skills: ["Python", "PyTorch", "HRI", "LLMs", "HuggingFace Transformers"],
+            description: "Open source LLM evaluation framework detecting bias in robotic LLM-powered decision-making",
             screenshot: llmPaper
         },
         {
